@@ -1,0 +1,28 @@
+body{
+    background-color: #00695c; 
+}
+
+#btnAlejo, #btnSebas{
+    background-color: #607d8b;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1%;
+    padding: 1%;
+}
+
+#btnAlejo:hover{
+    
+    background-color: aquamarine;
+}
+
+#btnSebas:hover{   
+    background-color: greenyellow;
+}
+
+a{
+    text-decoration: none;
+}
