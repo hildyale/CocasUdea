@@ -3,23 +3,79 @@
     <head>
         <meta charset="utf-8">
         <title>Arma tu comida</title>
-        <link rel="stylesheet" type="text/css" href="app2.css"> 
+        <link rel="stylesheet" type="text/css" href="app2.css">
+        <link rel="stylesheet" type="text/css" href="src/diamonds.css" />
+	<link rel="stylesheet" type="text/css" href="src/demo.css" /> 
     </head>
     <script src="../node_modules/pixi.js/dist/pixi.min.js"></script>
    
     <body>
-        <div id="menuComidas">
+      <!--<div id="label"><center><label id="labelComida">DESAYUNO</label></center></div>-->
+       <div><center>
+          <legend><span class="etiquetaComida">DESAYUNO</span></legend>
+           </center>
+       </div>
+           <div id="menuComidas">
+           <nav>
             <ul>
-                    <li><a href="#">Carnes</a></li>
-                    <li><a href="#">Lacteos</a></li>
-                    <li><a href="#">Grasas</a></li>
-                    <li><a href="#">Verduras</a></li>
-                    <li><a href="#">Frutas</a></li>
-                    <li><a href="#">Bebidas</a></li>
+                <li><button onclick="loadCerealesLegumbresFrutos()" class="selectTipo cl">Cereales,Legumbres,Frutos</button></li>
+                <li>
+                <button onclick="loadLecheLacteos()" class="selectTipo ll">Leche,Lácteos</button></li>
+                <li>
+                <button onclick="loadAceitesGrasas()" class="selectTipo ag">Aceites,Grasa animal</button></li>
+                <li>
+                <button onclick="loadFrutasVerduras()" class="selectTipo fv">Frutas,Verduras</button></li>
+                <li><button onclick="loadCarnesPescadosHuevos()" class="selectTipo cph">Carnes,Pescados,Huevos</button></li>
+                <li><button onclick="loadAzucaradosPasteleria()" class="selectTipo ap">Azúcarados,Pastelería</button></li>
                 </ul>
+                </nav>
             </div>
-
-        <!--<script type="text/javascript" src="app2.js"></script>-->
+                  
+	
+        <div class="container" id="foods">
+  <!--      
+<div class='item first-item'>
+ <img src='src/images/food/png/001-grape.png' width='130' height='100' />
+ </div>
+<div class='item'>
+ <img src='src/images/food/png/002-orange.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/003-apple.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/004-pear.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/005-vinegar.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/006-pizza.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/007-rice-1.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/008-soft-drink.png' width='130' height='100' />
+ </div>
+ <div class='item'>
+ <img src='src/images/food/png/009-squid.png' width='130' height='100' />
+ </div>
+ -->
+ 
+ </div>
+            <div>
+            <center>
+            <button class="addFood">Agregar a la comida</button>
+       <button class="endFood">Finalizar comida</button>
+       </center>
+       </div>
+        
+        
+    
+        <script type="text/javascript" src="src/js/jquery.min.js"></script>
+        <script type="text/javascript" src="src/js/jquery.row-grid.js"></script>
+        <script type="text/javascript" src="src/js/app2.js"></script>
      
     </body>
 </html>
