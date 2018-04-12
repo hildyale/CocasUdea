@@ -8,24 +8,24 @@
     <script src="../node_modules/pixi.js/dist/pixi.min.js"></script>
    
     <body>
-        <form class="caracterizacion" action="" method="post" name="caracterizaciones">
+        <form class="caracterizacion" action="../../app2.html" method="post" name="caracterizaciones">
         <ul>
-    <li>
+    <center><li>
          <h2>Caracterización</h2>
          
-    </li>
+    </li></center>
     <li>
         <legend for="name">Género:</legend>
          <label>
-            <input type="radio" name="genero" value="hombre"> Hombre
+            <input type="radio" name="genero" value="hombre" required> Hombre
         </label>
         <label>
             <input type="radio" name="genero" value="mujer"> Mujer
         </label>
     </li>
     <li>
-    <legend for="edad">Edad:</legend>
-    <input type="number" name="edad" placeholder="21" required/>
+    <legend for="edad" >Edad:</legend>
+    <label><input type="number" name="edad" placeholder="21" required/> Años</label>
     <span class="form_hint">21</span>
 </li>
    <li>
@@ -47,11 +47,12 @@
             <input type="radio" name="genero" value="mujer"> Alta(5 o 6 veces/semana)
         </label>
 </li>
+<center>
 <li>
-    <button class="submit" type="submit">Completar</button>
-</li>
+    <button class="submit" type="submit" >Completar</button>
+</li></center>
     </ul>
        
    </form>
-    </body>    
+    </body>   
 </html>

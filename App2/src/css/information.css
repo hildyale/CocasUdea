@@ -10,8 +10,7 @@
 
 *:focus {outline: none;}
 
-body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
-.caracterizacion h2, .caracterizacion label {font-family:Georgia, Times, "Times New Roman", serif;}
+body {}
 .form_hint, .required_notification {font-size: 11px;}
 
 .caracterizacion ul {
@@ -19,10 +18,10 @@ body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", san
     list-style-type:none;
     list-style-position:outside;
     margin:0px;
-    padding:0px;
 }
 .caracterizacion li{
-    padding:12px; 
+    margin-top: 5%;
+    padding:15px; 
     border-bottom:1px solid #eee;
     position:relative;
 }
@@ -51,7 +50,8 @@ body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", san
 }
 .caracterizacion input {
     height:20px; 
-    width:220px; 
+    width:150px;
+    margin: 1%;
     padding:5px 8px;
 }
 .caracterizacion textarea {padding:8px; width:300px;}
@@ -69,6 +69,7 @@ body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", san
 }
 /* Button Style */
 button.submit {
+    margin-top: 5%;
     background-color: #68b12f;
     background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
     background: -webkit-linear-gradient(top, #68b12f, #50911e);

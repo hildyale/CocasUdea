@@ -123,14 +123,19 @@ a{
    }
 
 .selectTipo{
-    width: 100%;
-    height: 10vh;
-    font-size: 1.28vw;
+    text-transform: uppercase;
+    height: 11vh;
+    margin-right: 0.15%;
+    margin-left: 0.5%;
+    font-size: 70%;
     font-weight: bold;
-    color: white;
+    color: white; 
 }
 
+
+
 .ll{
+    width: 12vw;
     -webkit-animation-name: bluePulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -140,30 +145,35 @@ a{
     -webkit-animation-name: yellowPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
+    width: 24vw;
 }
 
 .ag{
     -webkit-animation-name: orangePulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
+    width: 12vw;
 }
 
 .fv{
     -webkit-animation-name: greenPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
+    width: 13vw;
 }
 
 .cph{
     -webkit-animation-name: redPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
+    width: 20vw;
 }
 
 .ap{
     -webkit-animation-name: pinkPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
+    width: 18vw;
 }
 
 
@@ -230,8 +240,8 @@ a{
 .addFood::before {
 	content:"+";
 	width:35px;
-	max-height:29px;
-	height:100%;
+	max-height:39px;
+	height:100vh;
 	position:absolute;
 	display:block;
 	padding-top:8px;
@@ -250,7 +260,7 @@ a{
 
 .addFood:active::before {
 	top:-3px;
-	box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b, 0px 10px 5px #999 ;
+	box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b, 0px 10px 5px #999;
 }
 
 .endFood {
@@ -278,8 +288,8 @@ a{
 .endFood::before {
 	content:"O";
 	width:35px;
-	max-height:29px;
-	height:100%;
+	max-height:39px;
+	height:100vh;
 	position:absolute;
 	display:block;
 	padding-top:8px;
@@ -318,6 +328,8 @@ a{
 .item {
  float: left;
  margin-bottom: 10px;
+    height: 80px;
+    width: 80px;
 }
 .item img {
  max-width: 100%;
@@ -339,10 +351,11 @@ a{
     border-color: white;
     color: #fff;
     padding-top: 1%;
-    height: 8vh;
+    height: 12vh;
     width: 30vw;
     display: inline-block;
     font-size: 5vw;
+    font-family:Arial, Helvetica, sans-serif;
     margin-right: 4px;
     line-height: 30px;
     text-align: center;
