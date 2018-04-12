@@ -10,11 +10,15 @@ class MySprite extends PIXI.Sprite{
         this.interactive = true;
         this.buttonMode = true;
         this.anchor.set(0.5);
-        this.x = Math.floor((Math.random() * width/2) + 1);
-        this.y = Math.floor((Math.random() * height) + 1);
+        let ancho = ((width/2)-100);
+        let alto = (height-100);
+        this.x = Math.floor(Math.random()*(ancho-100+1)+100);
+        this.y = Math.floor(Math.random()*(alto-100+1)+100);
         this.cursor = "hover";
         this.originalX = this.x;
         this.originalY = this.y;
+        this.blendMode = PIXI.BLEND_MODES.NORMAL;
+        console.log(this.x+" : "+this.y);
     }
 
 
@@ -23,50 +27,27 @@ class MySprite extends PIXI.Sprite{
             this.data = event.data;
             this.dragging = true; 
             this.alpha = 0.7;
+            //console.log("x: "+this.x+" y: "+this.y);
         };
         
         const onDragEnd = event => {
             delete this.data;
             this.dragging = false; 
-            this.x = this.originalX;
-            this.y = this.originalY;
             this.alpha = 1;
-            /*let distanciaX = Math.abs(this.x - this.originalX);
-            let distanciaY = Math.abs(this.y - this.originalY);
-            let distx = distanciaX/5;*/
-        
-            /*let timer = app.ticker.add(()=>{
-                 if(this.x == this.originalX && this.y == this.originalY){
-                    return;
-                 }
-                 if(!(this.x == this.originalX)){
-                    if(this.x>this.originalX){
-                        this.x -= distx;
-                    }else{
-                        this.x += distx;
-                    }
-                }
-                if(!(this.y == this.originalY)){
-                    if(this.y>this.originalY){
-                        this.y -= 1;
-                    }else{
-                        this.y += 1;
-                    }
-                }
-                console.log('x = '+this.x);
-                console.log('y = '+this.y);
-                console.log('originalX = '+this.originalX);
-                console.log('originalY = '+this.originalY);
-            });*/
+            if (!((this.x > 960 && this.x < 1560)&&(this.y > 117 && this.y < 317))){
+                console.log("x: "+this.x+" y: "+this.y);
+                this.x = this.originalX;
+                this.y = this.originalY;
+            }else{
+                log("epa");
+            }
+
         };
         
         const onDragMove = event => {
             if(this.dragging){
-                //const newPosition = this.data.getLocalPosition(this.parent);
-                //this.x = newPosition.x;
-                //this.y = newPosition.y;
-                this.position.x += event.data.originalEvent.movementX;
-                this.position.y += event.data.originalEvent.movementY;
+               this.x += event.data.originalEvent.movementX;
+               this.y += event.data.originalEvent.movementY;
             }
         };
         
@@ -74,6 +55,7 @@ class MySprite extends PIXI.Sprite{
          .on('pointerup', onDragEnd)
          .on('pointerupoutside', onDragEnd)
          .on('pointermove', onDragMove)
+
     }
 
 }

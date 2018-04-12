@@ -1,13 +1,14 @@
 
 const log = console.log;
-const width = window.screen.availWidth - (window.screen.availWidth*0.1);
+const width = window.screen.availWidth;
 const height = window.screen.availHeight - (window.screen.availHeight*0.1);
 const app = new PIXI.Application(width, height, {backgroundColor : 0x1099bb});
 PIXI.SCALE_MODES.NEAREST;
 document.body.appendChild(app.view);
 
+
 //boton Start
-const start = PIXI.Sprite.fromImage('src/images/start.png');
+/*const start = PIXI.Sprite.fromImage('src/images/start.png');
 start.interactive = true;
 start.buttonMode = true;
 start.anchor.set(0.5);
@@ -20,6 +21,19 @@ start.on('pointerdown',crearPunto);
 app.stage.addChild(start);
 
 const egg = new Egg(app.stage);
+*/
+
+//containers
+let dot = new PIXI.Graphics();
+    dot.beginFill(0xcccccc);
+    dot.drawPolygon([0,0, 600,0, 600,200, 0,200]);
+    dot.endFill();
+    dot.x = width/2;
+    dot.y = height/8;
+    //log(960);
+    //log(117);
+    app.stage.addChild(dot);
+
 
 //Css style for icons
 var defaultIcon = "url('./src/images/egg52.png'),auto";
@@ -34,13 +48,11 @@ const buttons = []
 urls.map((url,i)=>{
     buttons[i] = new MySprite(app.stage,'src/images/'+url); 
     buttons[i].addAnimation();
-    buttons[i].on('pointerdown',()=>{
-        log('hola');
-    })
+    
 });
 
 
-function crearPunto(){
+/*function crearPunto(){
     log('start');
     let dot = new PIXI.Graphics();
     dot.beginFill("#ffffff");
@@ -69,5 +81,5 @@ function crearPunto(){
          dot.drawCircle(0,0,radius);
          log(radius);
      });
- }
+}*/
 
