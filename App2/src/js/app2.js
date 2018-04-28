@@ -57,7 +57,7 @@ $(document).ready(function() {
  var options = {minMargin: 5, maxMargin: 15, itemSelector: ".item", firstItemClass: "first-item"};
  $(".container").rowGrid(options);
     $(".container").append(
-     "<div class='item'><img src='src/images/food/png/001-grape.png' width='130' height='100' /></div>     <div class='item'> <img src='src/images/food/png/002-orange.png' width='130' height='100' /></div> <div class='item'><img src='src/images/food/png/003-apple.png' width='130' height='100' /></div> <div class='item'><img src='src/images/food/png/004-pear.png' width='130' height='100' /> </div> <div class='item'><img src='src/images/food/png/005-vinegar.png' width='130' height='100' /> </div> <div class='item'><img src='src/images/food/png/006-pizza.png' width='130' height='100' /> </div> <div class='item'><img src='src/images/food/png/007-rice-1.png' width='130' height='100' /> </div> <div class='item'><img src='src/images/food/png/008-soft-drink.png' width='130' height='100' /></div> <div class='item'><img src='src/images/food/png/009-squid.png' width='130' height='100' /></div>"                      
+     "<p>IMPORTANTE: Seleccione uno de los botones en la parte superior para empezar a elegir los elementos que armarán su comida, cada imagen de un alimento representa una porción de la misma, puede agregar tantas porciones como desee, cuando sienta que ha finalizado la selección de aimentos de click en finalizar comida y se realizará el cálculocor repondiente</p>"                      
                        
 );
 

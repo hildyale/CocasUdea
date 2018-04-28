@@ -135,7 +135,7 @@ a{
 
 
 .ll{
-    width: 12vw;
+    width: 16vw;
     -webkit-animation-name: bluePulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -145,35 +145,35 @@ a{
     -webkit-animation-name: yellowPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    width: 24vw;
+    width: 26vw;
 }
 
 .ag{
     -webkit-animation-name: orangePulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    width: 12vw;
+    width: 14vw;
 }
 
 .fv{
     -webkit-animation-name: greenPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    width: 13vw;
+    width: 18vw;
 }
 
 .cph{
     -webkit-animation-name: redPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    width: 20vw;
+    width: 22vw;
 }
 
 .ap{
     -webkit-animation-name: pinkPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    width: 18vw;
+    width: 20vw;
 }
 
 
