@@ -60,7 +60,7 @@ function loadFrutas() {
 function loadVerduras() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><img src='src/images/food/png/017-milk.png' width='130' height='100' /></div> <div class='item'><img src='src/images/food/png/039-cheese.png' width='130' height='100' /></div>"
+            "<div class='item'><button value='1'><img src='src/images/Verduras/artichoke.png'/></button></div><div class='item'><button value='2'><img src='src/images/Verduras/asparagus.png'/></button></div> <div class='item'><button value='3'><img src='src/images/Verduras/beet.png'/></button></div><div class='item'><button value='4'><img src='src/images/Verduras/bell-pepper.png'/></button></div><div class='item'><button value='5'><img src='src/images/Verduras/broccoli.png'/></button></div><div class='item'><button value='6'><img src='src/images/Verduras/cabbage.png'/></button></div><div class='item'><button value='7'><img src='src/images/Verduras/cauliflower.png'/></button></div><div class='item'><button value='8'><img src='src/images/Verduras/cucumber.png'/></button></div><div class='item'><button value='9'><img src='src/images/Verduras/tomato.png'/></button></div><div class='item'><button value='11'><img src='src/images/Verduras/lettuce.png'/></button></div><div class='item'><button value='12'><img src='src/images/Verduras/mushroom.png'/></button></div><div class='item'><button value='13'><img src='src/images/Verduras/onion.png'/></button></div><div class='item'><button value='14'><img src='src/images/Verduras/onion-egg.png'/></button></div> <div class='item'><button value='15'><img src='src/images/Verduras/onion-white.png'/></button></div><div class='item'><button value='16'><img src='src/images/Verduras/radish.png'/></button></div>"
             );
     
 }
@@ -68,7 +68,7 @@ function loadVerduras() {
 function loadCarnes() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><img src='src/images/food/png/017-milk.png' width='130' height='100' /></div> <div class='item'><img src='src/images/food/png/039-cheese.png' width='130' height='100' /></div>"
+            "<div class='item'><button value='1'><img src='src/images/Carnes/bacon.png'/></button></div><div class='item'><button value='2'><img src='src/images/Carnes/camaron.png'/></button></div> <div class='item'><button value='3'><img src='src/images/Carnes/cerdo.png'/></button></div><div class='item'><button value='4'><img src='src/images/Carnes/egg.png'/></button></div><div class='item'><button value='5'><img src='src/images/Carnes/fish.png'/></button></div><div class='item'><button value='6'><img src='src/images/Carnes/fried-chicken.png'/></button></div><div class='item'><button value='7'><img src='src/images/Carnes/ham.png'/></button></div><div class='item'><button value='8'><img src='src/images/Carnes/meat.png'/></button></div><div class='item'><button value='9'><img src='src/images/Carnes/meat-1.png'/></button></div><div class='item'><button value='10'><img src='src/images/Carnes/turkey.png'/></button></div<div class='item'><button value='11'><img src='src/images/Carnes/pescado.png'/></button></div><div class='item'><button value='12'><img src='src/images/Carnes/salami.png'/></button></div><div class='item'><button value='13'><img src='src/images/Carnes/sausage.png'/></button></div>"
             );
     
 }
@@ -76,7 +76,7 @@ function loadCarnes() {
 function loadDulces() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><img src='src/images/food/png/017-milk.png' width='130' height='100' /></div> <div class='item'><img src='src/images/food/png/039-cheese.png' width='130' height='100' /></div>"
+            "<div class='item'><button value='1'><img src='src/images/Dulces/butter.png'/></button></div><div class='item'><button value='2'><img src='src/images/Dulces/chocolate.png'/></button></div> <div class='item'><button value='3'><img src='src/images/Dulces/cookies.png'/></button></div><div class='item'><button value='4'><img src='src/images/Dulces/cupcakes.png'/></button></div><div class='item'><button value='5'><img src='src/images/Dulces/doughnut.png'/></button></div><div class='item'><button value='6'><img src='src/images/Dulces/honey.png'/></button></div><div class='item'><button value='7'><img src='src/images/Dulces/ice-cream.png'/></button></div><div class='item'><button value='8'><img src='src/images/Dulces/ice-cream-2.png'/></button></div><div class='item'><button value='9'><img src='src/images/Dulces/jam.png'/></button></div><div class='item'><button value='10'><img src='src/images/Dulces/pancakes.png'/></button></div<div class='item'><button value='11'><img src='src/images/Dulces/pie.png'/></button></div><div class='item'><button value='12'><img src='src/images/Dulces/pudding.png'/></button></div><div class='item'><button value='13'><img src='src/images/Dulces/soft-drink.png'/></button></div>"
             );
     
 }
