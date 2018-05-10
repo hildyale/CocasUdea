@@ -2,7 +2,7 @@
 function loadHarinas() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='1'><img src='src/images/Harinas/pizza.png'/></button></div><div class='item'><button value='2'><img src='src/images/Harinas/baguette.png'/></button></div> <div class='item'><button value='3'><img src='src/images/Harinas/bread.png'/></button></div><div class='item'><button value='4'><img src='src/images/Harinas/cereals.png'/></button></div><div class='item'><button value='5'><img src='src/images/Harinas/corndog.png'/></button></div><div class='item'><button value='6'><img src='src/images/Harinas/croissant.png'/></button></div><div class='item'><button value='7'><img src='src/images/Harinas/flour.png'/></button></div><div class='item'><button value='8'><img src='src/images/Harinas/grain.png'/></button></div><div class='item'><button value='9'><img src='src/images/Harinas/intbread.png'/></button></div><div class='item'><button value='10'><img src='src/images/Harinas/potato.png'/></button></div><div class='item'><button value='11'><img src='src/images/Harinas/friedpotatoes.png'/></button></div><div class='item'><button value='12'><img src='src/images/Harinas/pretzel.png'/></button></div><div class='item'><button value='13'><img src='src/images/Harinas/taco.png'/></button></div><div class='item'><button value='14'><img src='src/images/Harinas/toast.png'/></button></div>"
+            "<div class='item'><button value='266'><img src='src/images/Harinas/pizza.png'/></button></div><div class='item'><button value='178'><img src='src/images/Harinas/baguette.png'/></button></div> <div class='item'><button value='113'><img src='src/images/Harinas/bread.png'/></button></div><div class='item'><button value='348'><img src='src/images/Harinas/cereals.png'/></button></div><div class='item'><button value='263'><img src='src/images/Harinas/corndog.png'/></button></div><div class='item'><button value='386'><img src='src/images/Harinas/croissant.png'/></button></div><div class='item'><button value='324'><img src='src/images/Harinas/flour.png'/></button></div><div class='item'><button value='329'><img src='src/images/Harinas/grain.png'/></button></div><div class='item'><button value='293'><img src='src/images/Harinas/intbread.png'/></button></div><div class='item'><button value='77'><img src='src/images/Harinas/potato.png'/></button></div><div class='item'><button value='311'><img src='src/images/Harinas/friedpotatoes.png'/></button></div><div class='item'><button value='320'><img src='src/images/Harinas/pretzel.png'/></button></div><div class='item'><button value='226'><img src='src/images/Harinas/taco.png'/></button></div><div class='item'><button value='298'><img src='src/images/Harinas/toast.png'/></button></div>"
             );
     
 }
@@ -11,7 +11,7 @@ function loadHarinas() {
 function loadNuezSemillas() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='1'><img src='src/images/Nueces y semillas/girasol.png'/></button></div><div class='item'><button value='2'><img src='src/images/Nueces y semillas/hazelnut.png'/></button></div><div class='item'><button value='3'><img src='src/images/Nueces y semillas/pistachio.png'/></button></div>"
+            "<div class='item'><button value='58'><img src='src/images/Nueces y semillas/girasol.png'/></button></div><div class='item'><button value='200'><img src='src/images/Nueces y semillas/hazelnut.png'/></button></div><div class='item'><button value='170'><img src='src/images/Nueces y semillas/pistachio.png'/></button></div>"
             );
     
 }
@@ -20,7 +20,7 @@ function loadNuezSemillas() {
 function loadLacteos() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='1'><img src='src/images/Lacteos/milk.png'/></button></div><div class='item'><button value='2'><img src='src/images/Lacteos/lechecescremada.png'/></button></div> <div class='item'><button value='3'><img src='src/images/Lacteos/lecheenpolvo.png'/></button></div><div class='item'><button value='4'><img src='src/images/Lacteos/yogurt.png'/></button></div>"
+            "<div class='item'><button value='146'><img src='src/images/Lacteos/milk.png'/></button></div><div class='item'><button value='86'><img src='src/images/Lacteos/lechecescremada.png'/></button></div> <div class='item'><button value='248'><img src='src/images/Lacteos/lecheenpolvo.png'/></button></div><div class='item'><button value='124'><img src='src/images/Lacteos/yogurt.png'/></button></div>"
             );
     
 }
@@ -28,7 +28,7 @@ function loadLacteos() {
 function loadQuesoSustitutos() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='1'><img src='src/images/Quesos y sustitutos/cheese.png'/></button></div><div class='item'><button value='2'><img src='src/images/Quesos y sustitutos/mozarella.png'/></button></div>"
+            "<div class='item'><button value='100'><img src='src/images/Quesos y sustitutos/cheese.png'/></button></div><div class='item'><button value='124'><img src='src/images/Quesos y sustitutos/mozarella.png'/></button></div>"
             );
     
 }
@@ -85,7 +85,7 @@ $(document).ready(function() {
  var options = {minMargin: 5, maxMargin: 15, itemSelector: ".item", firstItemClass: "first-item"};
  $(".container").rowGrid(options);
     $(".container").append(
-     "<p>IMPORTANTE: Seleccione uno de los botones en la parte superior para empezar a elegir los elementos que armarán su comida, cada imagen de un alimento representa una porción de la misma, puede agregar tantas porciones como desee, cuando sienta que ha finalizado la selección de aimentos de click en finalizar comida y se realizará el cálculocor repondiente</p>"                      
+     "<p>IMPORTANTE: Seleccione uno de los botones en la parte superior para empezar a elegir los elementos que armarán su comida, cada imagen de un alimento representa una porción de la misma, puede agregar tantas porciones como desee, cuando sienta que ha finalizado la selección de aimentos de click en finalizar comida y se realizará el cálculo correpondiente</p>"                      
                        
 );
 
