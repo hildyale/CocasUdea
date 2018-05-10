@@ -7,8 +7,6 @@ class MySprite extends PIXI.Sprite{
         if(parent){
             parent.addChild(this);
         }
-        this.interactive = true;
-        this.buttonMode = true;
         //this.anchor.set(0.5);
         let ancho =(width/2);
         let alto = -150;
@@ -19,7 +17,9 @@ class MySprite extends PIXI.Sprite{
         this.originalY = this.y;
         this.blendMode = PIXI.BLEND_MODES.NORMAL;
         this.zIndex = -2;
-        //console.log(this.x+" : "+this.y);
+
     }
+
+    
 
 }
