@@ -1,2 +1,2 @@
 # CocasUdea
-proyecto Integrados en Pixi.js v4
+proyecto Integrador en Pixi.js v4
