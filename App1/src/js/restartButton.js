@@ -3,6 +3,8 @@ class restartButton extends PIXI.Sprite{
     constructor(parent=null,url){
         super(url);
         this.scale.set(1);
+        this.interactive = true;
+        this.buttonMode = true;
         if(parent){
             parent.addChild(this);
         }
@@ -14,8 +16,10 @@ class restartButton extends PIXI.Sprite{
         this.blendMode = PIXI.BLEND_MODES.NORMAL;
         this.zIndex = -2;
         this.on('pointerdown', event=>{
-            Inicio.visible = true;
-            gameScene.visible = false;
+            location.href = location.reload();
+            location.assign(url)
+            Inicio.visible = false;
+            gameScene.visible = true;
         })
     }
 

@@ -20,7 +20,7 @@ class backButton extends PIXI.Sprite{
             gameScene.visible = false;
             Instrucciones.visible = false;
             Acerca.visible = false;
-            ticker.destroy();
+            ticker.stop();
             console.log('back')
         })
     }

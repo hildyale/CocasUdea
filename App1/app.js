@@ -6,6 +6,10 @@ const height = window.screen.availHeight - 95
 const app = new PIXI.Application(width, height, {backgroundColor : 0x1099bb}); //1099bb
 PIXI.SCALE_MODES.NEAREST;
 document.body.appendChild(app.view);
+let ticker = new PIXI.ticker.Ticker();
+ticker.stop();
+configTicker();
+console.log(window.location.href );
 gameScene = new PIXI.Container();
 app.stage.addChild(gameScene);
 Inicio = new PIXI.Container();
@@ -18,7 +22,6 @@ Inicio.visible = true;
 gameScene.visible = false;
 Instrucciones.visible = false;
 Acerca.visible = false;
-let ticker = undefined;
 
 //Css style for icons
 var defaultIcon = "url('./src/images/egg52.png'),auto";
@@ -130,12 +133,9 @@ loader.load((loader,resources) => {
     sprites.buttons[2].y = (height/3)+272;
 
     sprites.buttons[0].on('pointerdown', event=>{
-        ticker = new PIXI.ticker.Ticker();
-        ticker.stop();
-        configTicker();
+        ticker.start();
         Inicio.visible = false;
         gameScene.addChild(sprites.back);
-        gameScene.updateTransform();
         gameScene.visible = true;
     })
 
@@ -225,7 +225,7 @@ function configTicker(){
             sprites.billboard.setTexture(loader.resources.billboardwin.texture);
         }
     });
-    ticker.start();
+    
 
     let leftArrow = keyboard(37); //left arrow
     let aKey = keyboard(65); //A key
