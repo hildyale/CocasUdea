@@ -6,10 +6,31 @@ const height = window.screen.availHeight - 95
 const app = new PIXI.Application(width, height, {backgroundColor : 0x1099bb}); //1099bb
 PIXI.SCALE_MODES.NEAREST;
 document.body.appendChild(app.view);
+const scale = 0.8;
+/*
+let href = window.location.href; //window.location.href
+let length = href.length;
+let i = 0;
+while(href.charAt(i)!=="?" && i<100){
+    i++;
+    console.log(i);
+}
+while(href.charAt(i)!=="=" && i<100){
+    i++;
+    console.log(i);
+}
+href = href.substring(i+1,href.length);
+if(/^([0-9])*$/.test(href)){
+  scale = parseFloat(href);
+}else{
+  scale = 0.8;
+}
+console.log(scale);
+*/
+
 let ticker = new PIXI.ticker.Ticker();
 ticker.stop();
 configTicker();
-console.log(window.location.href );
 gameScene = new PIXI.Container();
 app.stage.addChild(gameScene);
 Inicio = new PIXI.Container();
@@ -55,7 +76,7 @@ let url = [];
 for(let i=0;i<8;i++){
     let valor = Math.floor(Math.random()*380)+1;
     url[i] = ('src/images/all/1 ('+encodeURIComponent(valor)+').png');
-}
+}Acerca
 
 
 loader.add('alimento0',url[0]);
@@ -71,8 +92,9 @@ loader.load((loader,resources) => {
     log('onload')
     //billboard
     sprites.billboard = new PIXI.Sprite(resources.billboard.texture)
-    sprites.billboard.x = (width/2)-150;
-    sprites.billboard.y = height-230;
+    sprites.billboard.x = (width/2)-((sprites.billboard.width*scale)/2);
+    sprites.billboard.y = height-(sprites.billboard.height*scale);
+    sprites.billboard.scale.set(scale);
     gameScene.addChild(sprites.billboard);
 
 
@@ -101,20 +123,20 @@ loader.load((loader,resources) => {
     noSaludable.drawPolygon([0,0, 400,0, 400,150, 0,150]);
     noSaludable.endFill();*/
     sprites.noSaludable = new PIXI.Sprite(resources.trashCan.texture);
-    sprites.noSaludable.x = (width/4)-109;
-    sprites.noSaludable.y = height-250;
+    sprites.noSaludable.x = (width/4)-((sprites.noSaludable.width*scale)/2);
+    sprites.noSaludable.y = height-(sprites.noSaludable.height*scale);
     sprites.noSaludable.zIndex = 1;
-    sprites.noSaludable.interactive = true;
-    sprites.noSaludable.buttonMode = true;
+    sprites.noSaludable.scale.set(scale);
 
       //log(960);
     //log(117);
     gameScene.addChild(sprites.noSaludable);
 
     sprites.saludable = new PIXI.Sprite(resources.can.texture);
-    sprites.saludable.x = ((width/4)*3)-112;
-    sprites.saludable.y = height-250;
+    sprites.saludable.x = ((width/4)*3)-((sprites.saludable.width*scale)/2);
+    sprites.saludable.y = height-(sprites.saludable.height*scale);
     sprites.saludable.zIndex = 1;
+    sprites.saludable.scale.set(scale);
     
     gameScene.addChild(sprites.saludable);
 
@@ -122,15 +144,15 @@ loader.load((loader,resources) => {
     sprites.buttons = [];
     sprites.buttons[0] = new Button(Inicio,resources.inicio.texture,resources.inicioOver.texture);
     sprites.buttons[0].x = (width-sprites.buttons[0].width)/2;
-    sprites.buttons[0].y = (height/3)+100;
+    sprites.buttons[0].y = (height/10)+200;
 
     sprites.buttons[1] = new Button(Inicio,resources.instrucciones.texture,resources.instruccionesOver.texture);
     sprites.buttons[1].x = (width-sprites.buttons[1].width)/2;
-    sprites.buttons[1].y = (height/3)+186;
+    sprites.buttons[1].y = (height/10)+286;
 
     sprites.buttons[2] = new Button(Inicio,resources.acerca.texture,resources.acercaOver.texture);
     sprites.buttons[2].x = (width-sprites.buttons[2].width)/2;
-    sprites.buttons[2].y = (height/3)+272;
+    sprites.buttons[2].y = (height/10)+372;
 
     sprites.buttons[0].on('pointerdown', event=>{
         ticker.start();
@@ -153,7 +175,7 @@ loader.load((loader,resources) => {
 
     sprites.titulo = new PIXI.Sprite(resources.titulo.texture);
     sprites.titulo.x = (width-sprites.titulo.width)/2;
-    sprites.titulo.y = (height/5);
+    sprites.titulo.y = (height/10);
     Inicio.addChild(sprites.titulo);
 
 
@@ -164,12 +186,12 @@ loader.load((loader,resources) => {
 
     sprites.instruccionesTitulo = new PIXI.Sprite(resources.instruccionesTitulo.texture);
     sprites.instruccionesTitulo.x = (width-sprites.instruccionesTitulo.width)/2;
-    sprites.instruccionesTitulo.y = (height/5);
+    sprites.instruccionesTitulo.y = (height/10);
     Instrucciones.addChild(sprites.instruccionesTitulo);
 
     sprites.acercaTitulo = new PIXI.Sprite(resources.acercaTitulo.texture);
     sprites.acercaTitulo.x = (width-sprites.acercaTitulo.width)/2;
-    sprites.acercaTitulo.y = (height/5);
+    sprites.acercaTitulo.y = (height/10);
     Acerca.addChild(sprites.acercaTitulo);
 
     

@@ -16,8 +16,7 @@ class restartButton extends PIXI.Sprite{
         this.blendMode = PIXI.BLEND_MODES.NORMAL;
         this.zIndex = -2;
         this.on('pointerdown', event=>{
-            location.href = location.reload();
-            location.assign(url)
+            location.reload();
             Inicio.visible = false;
             gameScene.visible = true;
         })
