@@ -1,7 +1,10 @@
 html {
   margin: 0;
   padding: 0;
-  background: #1099bb;
+  background: #80ffbb; /*005f2c*/
+  background: -webkit-linear-gradient(to right,#009947, #80ffbb);
+  background:    -moz-linear-gradient(to right,#009947, #80ffbb);
+  background:         linear-gradient(to right,#009947,#80ffbb);
 }
 
 body {

@@ -21,7 +21,7 @@ class backButton extends PIXI.Sprite{
             Instrucciones.visible = false;
             Acerca.visible = false;
             ticker.stop();
-            console.log('back')
+            document.body.style.background = " linear-gradient(to right,#009947,#80ffbb)";
         })
     }
 
