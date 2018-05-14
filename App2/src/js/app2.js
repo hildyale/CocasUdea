@@ -81,6 +81,45 @@ function loadDulces() {
     
 }
 
+/*Función para elegir la comida*/
+function ElegirComida() {
+//Ingresamos un mensaje a mostrar
+    var comida = prompt("Seleccione la comida 0:Desayuno 1:Merienda 2:Almuerzo 3:Algo 4:Cena", );    
+
+//Detectamos si el usuario ingreso un valor
+    switch (comida) {
+    case "0":
+        document.querySelector('#etiquetaComida').innerText = 'Desayuno';            
+        break;
+    case "1":
+        document.querySelector('#etiquetaComida').innerText = 'Merienda';
+        break;
+    case "2":
+        document.querySelector('#etiquetaComida').innerText = 'Almuerzo';
+        break;
+    case "3":
+        document.querySelector('#etiquetaComida').innerText = 'Algo';
+        break;
+    case "4":
+        document.querySelector('#etiquetaComida').innerText = 'Cena';
+        break;   
+        default:
+            ElegirComida();
+}
+}
+
+/*Ralentizar*/
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
+
+
 $(document).ready(function() {
  var options = {minMargin: 5, maxMargin: 15, itemSelector: ".item", firstItemClass: "first-item"};
  $(".container").rowGrid(options);
@@ -88,8 +127,10 @@ $(document).ready(function() {
      "<p>IMPORTANTE: Seleccione uno de los botones en la parte superior para empezar a elegir los elementos que armarán su comida, cada imagen de un alimento representa una porción de la misma, puede agregar tantas porciones como desee, cuando sienta que ha finalizado la selección de aimentos de click en finalizar comida y se realizará el cálculo correpondiente</p>"                      
                        
 );
+ //sleep(1200);
+ ElegirComida();
 
-
+    
 
  
 // endless scrolling
@@ -107,3 +148,19 @@ $(".container").rowGrid("appended");
  }
  /*});*/
 });
+
+var elementoPresionado;
+
+$(function() {
+ $(document).on('click', 'button', function(event) {
+     if(this.id!="gruposComidas"){
+         $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
+         $(this).addClass('cambioColor');
+         $('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
+         elementoPresionado = this;
+    let id = this.value;
+	console.log("Se presionó el Boton con Id :"+ id)
+         }
+  });
+});
+

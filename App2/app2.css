@@ -344,24 +344,37 @@ a{
  margin-bottom: 0;
 }
 
-.etiquetaComida {
-    background: #1abc9c;
-    border-style: solid;
-    border-width: thick;
-    border-color: white;
+/*Legend de la comida*/
+
+#seleccionComida{
+  background-color: #1abc9c;
+  -webkit-box-shadow: 1px 8px 9px -1px rgba(0,0,0,0.63);
+-moz-box-shadow: 1px 8px 9px -1px rgba(0,0,0,0.63);
+box-shadow: 1px 8px 9px -1px rgba(0,0,0,0.63);
+margin-bottom: 3.5%;
+}
+
+/*Comida a elegir*/
+#etiquetaComida {    
     color: #fff;
     padding-top: 1%;
     height: 12vh;
     width: 30vw;
     display: inline-block;
-    font-size: 5vw;
+    font-weight: bold;
+    font-size: 3.5vw;
     font-family:Arial, Helvetica, sans-serif;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-    border-radius: 15px 15px 15px 0px;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+   
 }
 
+/*Div de informacíón*/
+#foods {
+  color: red;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+/*Bot{on presionado*/
+.cambioColor{
+    background-color: yellow;
+}
