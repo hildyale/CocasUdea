@@ -57,12 +57,12 @@ loader.add('billboard', 'src/images/billboard1.png')
 .add('acercaTitulo', 'src/images/acerca.png')
 .add('logosimbolo', 'src/images/logosimbolo-vertical2.png')
 .add('facultad', 'src/images/Facultad-de-Ingeniería.png')
-.add('jsonIconos', 'src/iconos.json')
+.add('jsonIconos', 'src/utils/iconos.json')
 
 
 loader.load((loader,resources) => {
     log('onload')
-    iconos = resources.jsonIconos.data;
+    iconos = resources.jsonIconos.data.alimentos;
     iconos = shuffle(iconos);
     //message
     let style = new PIXI.TextStyle({
