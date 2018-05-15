@@ -1,0 +1,175 @@
+
+{
+"__comentario":"Buenos: 20 , Malos: 8",
+"alimentos":[
+    {
+       "nombre":"banano",
+       "consejo":"controla su consumo si tienes sobrepeso o problemas de azúcar",
+       "src":"src/images/fruits-vegetables/png/028-banana.png",
+       "tipo":"bueno"
+    },
+    {
+        "nombre":"naranja",
+        "consejo":"controla su consumo por su alto contenido calorico",
+        "src":"src/images/fruits-vegetables/png/039-orange.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"manzana",
+        "consejo":"controla su consumo si tienen problemas de azúcar",
+        "src":"src/images/fruits-vegetables/png/050-apple.png",
+        "tipo":"bueno"
+     },    
+     {
+        "nombre":"tomate de árbol",
+        "consejo":"",
+        "src":"src/images/other/tomatotreeb.png",
+        "tipo":"bueno"
+     },    
+     {
+        "nombre":"zanahoria",
+        "consejo":"controla su consumo si tienen problemas de azúcar",
+        "src":"src/images/gastronomy-set/png/carrot.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"lechuga",
+        "consejo":"",
+        "src":"src/images/fruits-vegetables/png/029-lettuce.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"hamburguesa",
+        "consejo":"controla su consumo y evita adicionar salsas y tocineta",
+        "src":"src/images/food/png/024-burger.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"malteada",
+        "consejo":"posee alto contenido de azucares",
+        "src":"src/images/fast-food/png/013-milkshake.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"papitas mecato",
+        "consejo":"alto contenido de sodio que afecta tus riñones",
+        "src":"src/images/other/chips.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"galletas",
+        "consejo":"alto contenido de azucar",
+        "src":"src/images/gastronomy-set/png/cookies.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"gaseosa",
+        "consejo":"alto contenido en sodio",
+        "src":"src/images/gastronomy-set/png/can.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"embutidos",
+        "consejo":"alto contenido en sodio",
+        "src":"src/images/gastronomy-set/png/sausage.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"arroz",
+        "consejo":"controla su consumo alto contenido de harina",
+        "src":"src/images/gastronomy-set/png/rice.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"frijoles",
+        "consejo":"si tienes problemas de riñones, controla su consumo",
+        "src":"src/images/gastronomy-set/png/beans.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"pan blanco",
+        "consejo":"controla su consumo",
+        "src":"src/images/gastronomy-set/png/bread.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"carne roja",
+        "consejo":"controla su consumo",
+        "src":"src/images/food/png/011-steak.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"huevo",
+        "consejo":"controla su consumo si tienes problemas de colesterol",
+        "src":"src/images/gastronomy-set/png/egg.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"arepa",
+        "consejo":"",
+        "src":"src/images/other/arepa.jpg",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"mantequilla",
+        "consejo":"alto contenido de colesterol",
+        "src":"src/images/food/png/033-butter.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"aceite y grasas",
+        "consejo":"alto contenido de colesterol",
+        "src":"src/images/other/olive-oil.png",
+        "tipo":"malo"
+     },
+     {
+        "nombre":"papas",
+        "consejo":"controla su consumo alto contenido de harina",
+        "src":"src/images/fruits-vegetables/png/022-potato.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"plátano",
+        "consejo":"controla su consumo alto contenido de harina",
+        "src":"src/images/other/green-banana.jpeg",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"tomate",
+        "consejo":"lávalo bien antes de consumir",
+        "src":"src/images/gastronomy-set/png/tomato.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"pescado",
+        "consejo":"preferiblemente fresco",
+        "src":"src/images/gastronomy-set/png/fish.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"pollo",
+        "consejo":"retira la piel antes de consumirlo",
+        "src":"src/images/gastronomy-set/png/meat.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"chocolate",
+        "consejo":"controla el azúcar o panela",
+        "src":"src/images/other/hot-cup.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"cafe",
+        "consejo":"controla su consumo",
+        "src":"src/images/gastronomy-set/png/coffee-maker.png",
+        "tipo":"bueno"
+     },
+     {
+        "nombre":"queso",
+        "consejo":"controla su consumo",
+        "src":"src/images/gastronomy-set/png/cheese-1.png",
+        "tipo":"bueno"
+     }
+
+]
+}
