@@ -1,0 +1,24 @@
+{
+  "name": "cocasudea",
+  "version": "1.0.0",
+  "description": "proyecto Integrador en Pixi.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server  --files 'App1'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hildyale/cocasudea.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hildyale/cocasudea/issues"
+  },
+  "homepage": "https://github.com/hildyale/cocasudea#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.4"
+  }
+}
