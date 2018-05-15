@@ -1,33 +1,19 @@
 
 const log = console.log;
-const width = window.screen.availWidth;
-//const height = window.screen.availHeight - (window.screen.availHeight*0.1);
-const height = window.screen.availHeight - 95
+const width = document.documentElement.clientWidth;
+//const width = window.screen.availWidth;
+//const height = window.screen.availHeight-95;
+const height = document.documentElement.clientHeight-4;
 const app = new PIXI.Application(width, height, {transparent : true}); //1099bb
 PIXI.SCALE_MODES.NEAREST;
 document.body.appendChild(app.view);
 const scale = 0.8;
-/*
-let href = window.location.href; //window.location.href
-let length = href.length;
-let i = 0;
-while(href.charAt(i)!=="?" && i<100){
-    i++;
-    console.log(i);
+let cantidadAlimentos = getParameterByName('cant');
+if(!cantidadAlimentos){
+    cantidadAlimentos = 10;
 }
-while(href.charAt(i)!=="=" && i<100){
-    i++;
-    console.log(i);
-}
-href = href.substring(i+1,href.length);
-if(/^([0-9])*$/.test(href)){
-  scale = parseFloat(href);
-}else{
-  scale = 0.8;
-}
-console.log(scale);
-*/
-
+let iconos = undefined;
+let Activo = undefined;
 let ticker = new PIXI.ticker.Ticker();
 ticker.stop();
 configTicker();
@@ -71,27 +57,28 @@ loader.add('billboard', 'src/images/billboard1.png')
 .add('acercaTitulo', 'src/images/acerca.png')
 .add('logosimbolo', 'src/images/logosimbolo-vertical2.png')
 .add('facultad', 'src/images/Facultad-de-Ingeniería.png')
+.add('jsonIconos', 'src/iconos.json')
 
-
-
-let url = [];
-for(let i=0;i<8;i++){
-    let valor = Math.floor(Math.random()*380)+1;
-    url[i] = ('src/images/all/1 ('+encodeURIComponent(valor)+').png');
-}Acerca
-
-
-loader.add('alimento0',url[0]);
-loader.add('alimento1',url[1]);
-loader.add('alimento2',url[2]);
-loader.add('alimento3',url[3]);
-loader.add('alimento4',url[4]);
-loader.add('alimento5',url[5]);
-loader.add('alimento6',url[6]);
-loader.add('alimento7',url[7]);
 
 loader.load((loader,resources) => {
     log('onload')
+    iconos = resources.jsonIconos.data;
+    iconos = shuffle(iconos);
+    //message
+    let style = new PIXI.TextStyle({
+        fontFamily: "times new roman",
+        fontSize: 30,
+        fill: "white",
+      });
+
+    sprites.message = new PIXI.Text("",style);
+    sprites.message.position.set(10,height/2);
+    sprites.message.width; // 2 times to wide.
+    sprites.message.resolution = 1;
+    sprites.message.updateText();
+    sprites.message.width; // Correct width.
+    gameScene.addChild(sprites.message);
+
     //billboard
     sprites.billboard = new PIXI.Sprite(resources.billboard.texture)
     sprites.billboard.x = (width/2)-((sprites.billboard.width*scale)/2);
@@ -100,38 +87,26 @@ loader.load((loader,resources) => {
     gameScene.addChild(sprites.billboard);
 
 
-
     /************************************************************************************************************************************************************** */
     //Sprites
-    /*sprites.alimentos = []
-    for(let i=0;i<8;i++){
-        let name = 'alimento'+i;
-        sprites.alimentos[i] = new MySprite(gameScene,resources.name.texture); 
-    }*/
-    sprites.alimentos = [];
-    sprites.alimentos[0] = new MySprite(gameScene,resources.alimento0.texture);
-    sprites.alimentos[1] = new MySprite(gameScene,resources.alimento1.texture);
-    sprites.alimentos[2] = new MySprite(gameScene,resources.alimento2.texture);
-    sprites.alimentos[3] = new MySprite(gameScene,resources.alimento3.texture);
-    sprites.alimentos[4] = new MySprite(gameScene,resources.alimento4.texture);
-    sprites.alimentos[5] = new MySprite(gameScene,resources.alimento5.texture);
-    sprites.alimentos[6] = new MySprite(gameScene,resources.alimento6.texture);
-    sprites.alimentos[7] = new MySprite(gameScene,resources.alimento7.texture);
 
+    sprites.alimentos = [];
+    if(cantidadAlimentos>iconos.length){
+      cantidadAlimentos = iconos.length;
+    }
+    for(i=0;i<cantidadAlimentos;i++){
+        sprites.alimentos[i] = new MySprite(gameScene,iconos[i].src,iconos[i].nombre,iconos[i].tipo,iconos[i].consejo);
+    }
+    
     /************************************************************************************************************************************************************** */
     //containers
-    /*var noSaludable = new PIXI.Graphics();
-    noSaludable.beginFill(0xcccccc);
-    noSaludable.drawPolygon([0,0, 400,0, 400,150, 0,150]);
-    noSaludable.endFill();*/
+
     sprites.noSaludable = new PIXI.Sprite(resources.trashCan.texture);
     sprites.noSaludable.x = (width/4)-((sprites.noSaludable.width*scale)/2);
     sprites.noSaludable.y = height-(sprites.noSaludable.height*scale);
     sprites.noSaludable.zIndex = 1;
     sprites.noSaludable.scale.set(scale);
 
-      //log(960);
-    //log(117);
     gameScene.addChild(sprites.noSaludable);
 
     sprites.saludable = new PIXI.Sprite(resources.can.texture);
@@ -220,12 +195,11 @@ loader.onComplete.add(() => {
 
 
 function configTicker(){
-    let Activo = undefined;
     let cont = 0
     let i = 0
     let velocity = 1;
     ticker.add(()=>{
-        if(i<8){
+        if(i<cantidadAlimentos){
             cont += velocity
             Activo = sprites.alimentos[i];
             Activo.y += velocity;
@@ -236,25 +210,39 @@ function configTicker(){
                 sprites.billboard.setTexture(loader.resources.billboardbad.texture);
                 changeBillboard();
             }
+            
             if(hit(Activo,sprites.saludable)){
                 i += 1
                 cont = 0
                 velocity = 1;
-                sprites.billboard.setTexture(loader.resources.billboardok.texture);
                 Activo.alpha = 0;
-                changeBillboard();
+                if(Activo.type === "bueno"){
+                    sprites.billboard.setTexture(loader.resources.billboardok.texture);
+                    changeBillboard();
+                }else{
+                    sprites.billboard.setTexture(loader.resources.billboardbad.texture);
+                    changeBillboard();
+                }
+                changeTip();
             }
+        
             if(hit(Activo,sprites.noSaludable)){
                 i += 1
                 cont = 0
                 velocity = 1;
-                sprites.billboard.setTexture(loader.resources.billboardbad.texture);
                 Activo.alpha = 0;
-                changeBillboard();
+                if(Activo.type === "malo"){
+                    sprites.billboard.setTexture(loader.resources.billboardok.texture);
+                    changeBillboard();
+                }else{
+                    sprites.billboard.setTexture(loader.resources.billboardbad.texture);
+                    changeBillboard();
+                }
+                changeTip();
             }
+            
         }else{
-            Activo = undefined;
-            sprites.billboard.setTexture(loader.resources.billboardwin.texture);
+            changeFinish();
         }
     });
     
@@ -270,7 +258,7 @@ function configTicker(){
 
     const derecha = () =>{
         if(Activo){
-            if(Activo.y < height-250){
+            if(Activo.y < height-(sprites.saludable.height*scale)){
                 Activo.x += 40;
             }
         }
@@ -279,17 +267,16 @@ function configTicker(){
 
     const abajo = () =>{
         if(Activo){
-            if(Activo.y < height-250){
+            if(Activo.y < height-(sprites.saludable.height*scale)){
                 velocity = 10;
             }
         }
-        log('abajo')
     };
 
 
     const izquierda = () =>{
         if(Activo){
-            if(Activo.y < height-250){
+            if(Activo.y < height-(sprites.saludable.height*scale)){
                 Activo.x -= 40;
             }
         }

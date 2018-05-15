@@ -1,4 +1,38 @@
 
+//https://joedicastro.com/algoritmos-shuffle.html
+//http://www.programming-algorithms.net/article/43676/Fisher-Yates-shuffle
+//The de-facto unbiased shuffle algorithm is the Fisher-Yates (aka Knuth) Shuffle
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+//get url param
+
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 /******************************************************************************************************************************************************************** */
 //keyboard
 function keyboard(keyCode) {
@@ -15,7 +49,7 @@ function keyboard(keyCode) {
         key.isDown = true;
         key.isUp = false;
       }
-      //event.preventDefault();
+      event.preventDefault();
     };
   
     //The `upHandler`
@@ -122,8 +156,36 @@ function sleep(ms) {
   }
   
   async function changeBillboard() {
-    console.log('Taking a break...');
+    //console.log('Taking a break...');
     await sleep(1000);
     sprites.billboard.setTexture(loader.resources.billboard.texture);
-    console.log('Two second later');
+    //console.log('Two second later');
   }  
+
+  async function changeFinish() {
+    await sleep(1000);
+    Activo = undefined;
+    sprites.billboard.setTexture(loader.resources.billboardwin.texture);
+    ticker.stop();
+  }  
+
+  async function changeTip() {
+    sprites.message.text = Activo.tip; 
+    await sleep(2000);
+    sprites.message.text = ""; 
+  }
+
+/*
+  async function changeBillboard() {
+    //console.log('Taking a break...');
+    await sleep(1000);
+    function animate() {
+      if (sprites.billboard.alpha <= 1) {
+        sprites.billboard2.alpha -= .01;
+        sprites.billboard.alpha += .01;
+      }
+      log(sprites.billboard.alpha);
+      requestAnimationFrame(animate);
+    }
+    //console.log('Two second later');
+  } */

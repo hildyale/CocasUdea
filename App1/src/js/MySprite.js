@@ -1,6 +1,6 @@
-class MySprite extends PIXI.Sprite{
+class MySprite extends PIXI.Sprite.fromImage{
 
-    constructor(parent=null,url){
+    constructor(parent=null,url,name,type,tip){
         super(url);
         this.scale.set(0.2);
         this.speed = 2;
@@ -17,7 +17,9 @@ class MySprite extends PIXI.Sprite{
         this.originalY = this.y;
         this.blendMode = PIXI.BLEND_MODES.NORMAL;
         this.zIndex = -2;
-
+        this.name = name;
+        this.type = type;
+        this.tip = tip;
     }
 
     
