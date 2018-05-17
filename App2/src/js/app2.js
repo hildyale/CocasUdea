@@ -149,18 +149,57 @@ $(".container").rowGrid("appended");
  /*});*/
 });
 
-var elementoPresionado;
+var sumaCalorias=0;//Aquí se almacenan os valores de las calorías
 
-$(function() {
+$(function() {//Al presionar uno de los botones
  $(document).on('click', 'button', function(event) {
      if(this.id!="gruposComidas"){
          $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
          $(this).addClass('cambioColor');
-         $('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
-         elementoPresionado = this;
-    let id = this.value;
-	console.log("Se presionó el Boton con Id :"+ id)
+         $(this).prop('disabled', true);
+         //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
+         
+    sumaCalorias = sumaCalorias + parseInt(this.value);
+	console.log("suma de calorías" + sumaCalorias);
          }
   });
 });
+
+function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
+    
+     
+         $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
+         $('#foods button').removeClass('cambioColor');
+         $('#foods button').prop('disabled', false);//Habilitar botones de la comida
+         //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
+         estadoHumor(sumaCalorias);
+        
+}
+
+function finSuma(){//Finaliza comida y empieza de nuevo
+    if (confirm("Calorias en total: "+ sumaCalorias+ " Proteinas: 20%"+ " Grasas: 15%"+" Carbohidratos_ 80%") == true) {
+        $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
+    $('#foods button').removeClass('cambioColor');
+    $('#foods button').prop('disabled', false);//Habilitar botones de la comida
+         //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
+         sumaCalorias = 0;
+        ElegirComida();//Reiniciamos
+    } else {
+        alert("Nos veremos proximamente!");
+    }
+    
+    
+    
+}
+
+function estadoHumor(calorias){
+    if(calorias>2000){
+    document.getElementById("imagenEstado").src = "src/images/triste.png";
+        
+    }else{
+    document.getElementById("imagenEstado").src = "src/images/feliz.png";
+        
+    }
+    
+}
 

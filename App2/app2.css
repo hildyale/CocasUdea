@@ -311,6 +311,56 @@ a{
 	top:-3px;
 	box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b, 0px 10px 5px #999 ;
 }
+/*Quitar de la comida*/
+.removeFood {
+	background-color:#e0903b;
+    font-weight: bold;
+	font-size:12px;
+	text-decoration:none;
+	color:#fff;
+	position:relative;
+	padding:10px 20px;
+	border-left:solid 1px #e0903b;
+	margin-left:35px;
+	background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: inset 0px 1px 0px #dc7405, 0px 5px 0px 0px #dc7405, 0px 10px 5px #999;
+}
+
+.removeFood:active {
+	top:3px;
+	background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	box-shadow: inset 0px 1px 0px #e33100, 0px 2px 0px 0px #dc7405, 0px 5px 3px #999;
+}
+
+.removeFood::before {
+	content:"-";
+	width:35px;
+	max-height:39px;
+	height:100vh;
+	position:absolute;
+	display:block;
+	padding-top:8px;
+	top:0px;
+	left:-36px;
+	font-size:20px;
+	font-weight:bold;
+	color:#dc7405;
+	text-shadow:1px 1px 0px #dc7405;
+	border-right:solid 1px #dc7405;
+    background-color: white;
+	/*background-image: linear-gradient(bottom, rgb(10,94,125) 0%, rgb(14,139,184) 100%);*/
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 0px 10px 5px #999 ;
+}
+
+.removeFood:active::before {
+	top:-3px;
+	box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b, 0px 10px 5px #999 ;
+}
+
 .container {
   background: #eee;
   margin: 2.5%;
@@ -374,7 +424,16 @@ margin-bottom: 3.5%;
   font-size: 3vh;
 }
 
-/*Bot{on presionado*/
+/*Boton presionado*/
 .cambioColor{
     background-color: yellow;
+}
+
+/*Imagen de estado de humor*/
+#imagenEstado{
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    
+    height: auto;
+    width: 8vw;
 }

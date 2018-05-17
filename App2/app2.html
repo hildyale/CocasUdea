@@ -43,9 +43,15 @@
            
                                  <div>
             <center>
-            <button class="addFood" id="gruposComidas">Agregar a la comida</button>
-       <button class="endFood" id="gruposComidas">Finalizar comida</button>
+            <button class="removeFood" id="gruposComidas">Quitar de la comida</button>
+            <button class="addFood" onclick="sumarComida()" id="gruposComidas">Agregar a la comida</button>
+       <button class="endFood" onclick="finSuma()" id="gruposComidas">Finalizar comida</button>
        </center>
+       </div>
+       
+       <div class="estadoNutricion">
+           <center><img id="imagenEstado" src="src/images/neutra.png" ></center>
+           
        </div>
         
         
