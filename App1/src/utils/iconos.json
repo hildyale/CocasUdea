@@ -107,7 +107,7 @@
      {
         "nombre":"arepa",
         "consejo":"",
-        "src":"src/images/other/arepa.jpg",
+        "src":"src/images/other/arepa.png",
         "tipo":"bueno"
      },
      {
@@ -131,7 +131,7 @@
      {
         "nombre":"plátano",
         "consejo":"controla su consumo alto contenido de harina",
-        "src":"src/images/other/green-banana.jpeg",
+        "src":"src/images/other/green-banana.png",
         "tipo":"bueno"
      },
      {
