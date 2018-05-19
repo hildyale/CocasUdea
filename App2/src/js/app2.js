@@ -2,7 +2,7 @@
 function loadHarinas() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='266'><img src='src/images/Harinas/pizza.png'/></button></div><div class='item'><button value='178'><img src='src/images/Harinas/baguette.png'/></button></div> <div class='item'><button value='113'><img src='src/images/Harinas/bread.png'/></button></div><div class='item'><button value='348'><img src='src/images/Harinas/cereals.png'/></button></div><div class='item'><button value='263'><img src='src/images/Harinas/corndog.png'/></button></div><div class='item'><button value='386'><img src='src/images/Harinas/croissant.png'/></button></div><div class='item'><button value='324'><img src='src/images/Harinas/flour.png'/></button></div><div class='item'><button value='329'><img src='src/images/Harinas/grain.png'/></button></div><div class='item'><button value='293'><img src='src/images/Harinas/intbread.png'/></button></div><div class='item'><button value='77'><img src='src/images/Harinas/potato.png'/></button></div><div class='item'><button value='311'><img src='src/images/Harinas/friedpotatoes.png'/></button></div><div class='item'><button value='320'><img src='src/images/Harinas/pretzel.png'/></button></div><div class='item'><button value='226'><img src='src/images/Harinas/taco.png'/></button></div><div class='item'><button value='298'><img src='src/images/Harinas/toast.png'/></button></div>"
+            "<div class='item'><button value='266'><img src='src/images/Harinas/pizza.png'/></button></div><div class='item'><button value='178'><img src='src/images/Harinas/baguette.png'/></button></div> <div class='item'><button value='113'><img src='src/images/Harinas/bread.png'/></button></div><div class='item'><button value='348'><img src='src/images/Harinas/cereals.png'/></button></div><div class='item'><button value='263'><img src='src/images/Harinas/corndog.png'/></button></div><div class='item'><button value='386'><img src='src/images/Harinas/croissant.png'/></button></div><div class='item'><button value='324'><img src='src/images/Harinas/flour.png'/></button></div><div class='item'><button value='329'><img src='src/images/Harinas/grain.png'/></button></div><div class='item'><button value='293'><img src='src/images/Harinas/intbread.png'/></button></div><div class='item'><button value='77'><img src='src/images/Harinas/potato.png'/></button></div><div class='item'><button value='311'><img src='src/images/Harinas/friedpotatoes.png'/></button></div><div class='item'><button value='320'><img src='src/images/Harinas/pretzel.png'/></button></div><div class='item'><button value='226'><img src='src/images/Harinas/taco.png'/></button></div><div class='item'><button value='298'><img src='src/images/Harinas/toast.png'/></button></div><div class='item'><button value='159'><img src='src/images/Harinas/yuca.jpg'/></button></div><div class='item'><button value='109'><img src='src/images/Harinas/arepa.jpg'/></button></div><div class='item'><button value='200'><img src='src/images/Harinas/platano_maduro.jpg'/></button></div><div class='item'><button value='122'><img src='src/images/Harinas/platano_verde.png'/></button></div><div class='item'><button value='130'><img src='src/images/Harinas/rice.png'/></button></div><div class='item'><button value='113'><img src='src/images/Harinas/mazorca.jpg'/></button></div><div class='item'><button value='158'><img src='src/images/Harinas/spaguetti.png'/></button></div>"
             );
     
 }
@@ -20,7 +20,7 @@ function loadNuezSemillas() {
 function loadLacteos() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='146'><img src='src/images/Lacteos/milk.png'/></button></div><div class='item'><button value='86'><img src='src/images/Lacteos/lechecescremada.png'/></button></div> <div class='item'><button value='248'><img src='src/images/Lacteos/lecheenpolvo.png'/></button></div><div class='item'><button value='124'><img src='src/images/Lacteos/yogurt.png'/></button></div>"
+            "<div class='item' id='lacteos'><button value='146'><img src='src/images/Lacteos/milk.png'/></button></div><div class='item'><button value='248'><img src='src/images/Lacteos/leche_polvo.jpg'/></button></div> <div class='item'><button value='100'><img src='src/images/Lacteos/yogurt.png'/></button></div>"
             );
     
 }
@@ -28,7 +28,7 @@ function loadLacteos() {
 function loadQuesoSustitutos() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='100'><img src='src/images/Quesos y sustitutos/cheese.png'/></button></div><div class='item'><button value='124'><img src='src/images/Quesos y sustitutos/mozarella.png'/></button></div>"
+            "<div class='item'><button value='100'><img src='src/images/Quesos y sustitutos/cheese.png'/></button></div><div class='item'><button value='124'><img src='src/images/Quesos y sustitutos/mozarella.png'/></button></div><div class='item'><button value='380'><img src='src/images/Quesos y sustitutos/embutido.jpg'/></button></div><div class='item'><button value='336'><img src='src/images/Quesos y sustitutos/salami.png'/></button></div><div class='item'><button value='400'><img src='src/images/Quesos y sustitutos/sausage.png'/></button></div>"
             );
     
 }
@@ -36,7 +36,7 @@ function loadQuesoSustitutos() {
 function loadGrasas() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='322'><img src='src/images/Grasas/avocado.png'/></button></div><div class='item'><button value='160'><img src='src/images/Grasas/coco.png'/></button></div> <div class='item'><button value='102'><img src='src/images/Grasas/mantequilla.png'/></button></div><div class='item'><button value='94'><img src='src/images/Grasas/mantequillademani.png'/></button></div><div class='item'><button value='57'><img src='src/images/Grasas/mayonesa.png'/></button></div><div class='item'><button value='9'><img src='src/images/Grasas/vinagre.png'/></button></div>"
+            "<div class='item'><button value='322'><img src='src/images/Grasas/avocado.png'/></button></div><div class='item'><button value='160'><img src='src/images/Grasas/coco.png'/></button></div> <div class='item'><button value='102'><img src='src/images/Grasas/mantequilla.png'/></button></div><div class='item'><button value='57'><img src='src/images/Grasas/mayonesa.png'/></button></div><div class='item'><button value='9'><img src='src/images/Grasas/vinagre.png'/></button></div>"
             );
     
 }
@@ -44,7 +44,7 @@ function loadGrasas() {
 function loadLeguminosas() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='316'><img src='src/images/Leguminosas/beans.png'/></button></div><div class='item'><button value='117'><img src='src/images/Leguminosas/peas.png'/></button></div>"
+            "<div class='item'><button value='116'><img src='src/images/Leguminosas/lentejas.jpg'/></button></div><div class='item'><button value='112'><img src='src/images/Leguminosas/frijoles.jpg'/></button></div><div class='item'><button value='316'><img src='src/images/Leguminosas/garbanzo.jpg'/></button></div>"
             );
     
 }
@@ -68,7 +68,7 @@ function loadVerduras() {
 function loadCarnes() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='84'><img src='src/images/Carnes/tocino.png'/></button></div><div class='item'><button value='48'><img src='src/images/Carnes/camaron.png'/></button></div> <div class='item'><button value='208'><img src='src/images/Carnes/cerdo.png'/></button></div><div class='item'><button value='80'><img src='src/images/Carnes/egg.jpg'/></button></div><div class='item'><button value='260'><img src='src/images/Carnes/atun.png'/></button></div><div class='item'><button value='178'><img src='src/images/Carnes/fried-chicken.png'/></button></div><div class='item'><button value='108'><img src='src/images/Carnes/ham.png'/></button></div><div class='item'><button value='186'><img src='src/images/Carnes/pollosinpiel.png'/></button></div><div class='item'><button value='285'><img src='src/images/Carnes/pollofrito.png'/></button></div><div class='item'><button value='170'><img src='src/images/Carnes/turkey.png'/></button></div></div><div class='item'><button value='58'><img src='src/images/Carnes/salami.png'/></button></div><div class='item'><button value='147'><img src='src/images/Carnes/sausage.png'/></button></div>"
+            "<div class='item'><button value='48'><img src='src/images/Carnes/camaron.png'/></button></div> <div class='item'><button value='208'><img src='src/images/Carnes/cerdo.png'/></button></div><div class='item'><button value='80'><img src='src/images/Carnes/egg.jpg'/></button></div><div class='item'><button value='260'><img src='src/images/Carnes/atun.png'/></button></div><div class='item'><button value='178'><img src='src/images/Carnes/fried-chicken.png'/></button></div><div class='item'><button value='108'><img src='src/images/Carnes/ham.png'/></button></div><div class='item'><button value='186'><img src='src/images/Carnes/pollosinpiel.png'/></button></div><div class='item'><button value='285'><img src='src/images/Carnes/pollofrito.png'/></button></div><div class='item'><button value='170'><img src='src/images/Carnes/turkey.png'/></button></div>"
             );
     
 }
@@ -76,7 +76,7 @@ function loadCarnes() {
 function loadDulces() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='133'><img src='src/images/Dulces/nutella.png'/></button></div><div class='item'><button value='223'><img src='src/images/Dulces/chocolate.png'/></button></div> <div class='item'><button value='388'><img src='src/images/Dulces/cookies.png'/></button></div><div class='item'><button value='227'><img src='src/images/Dulces/cupcake.png'/></button></div><div class='item'><button value='250'><img src='src/images/Dulces/doughnut.png'/></button></div><div class='item'><button value='128'><img src='src/images/Dulces/honey.png'/></button></div><div class='item'><button value='145'><img src='src/images/Dulces/ice-cream.png'/></button></div><div class='item'><button value='287'><img src='src/images/Dulces/ice-cream-2.png'/></button></div><div class='item'><button value='119'><img src='src/images/Dulces/jam.png'/></button></div><div class='item'><button value='225'><img src='src/images/Dulces/pancakes.png'/></button></div><div class='item'><button value='350'><img src='src/images/Dulces/pie.png'/></button></div><div class='item'><button value='120'><img src='src/images/Dulces/pudding.png'/></button></div><div class='item'><button value='88'><img src='src/images/Dulces/coke.png'/></button></div>"
+            "<div class='item dulces'><button value='133'><img src='src/images/Dulces/nutella.png'/></button></div><div class='item'><button value='223'><img src='src/images/Dulces/chocolate.png'/></button></div> <div class='item'><button value='388'><img src='src/images/Dulces/cookies.png'/></button></div><div class='item'><button value='227'><img src='src/images/Dulces/cupcake.png'/></button></div><div class='item'><button value='250'><img src='src/images/Dulces/doughnut.png'/></button></div><div class='item'><button value='128'><img src='src/images/Dulces/honey.png'/></button></div><div class='item'><button value='145'><img src='src/images/Dulces/ice-cream.png'/></button></div><div class='item'><button value='287'><img src='src/images/Dulces/ice-cream-2.png'/></button></div><div class='item'><button value='119'><img src='src/images/Dulces/jam.png'/></button></div><div class='item'><button value='225'><img src='src/images/Dulces/pancakes.png'/></button></div><div class='item'><button value='350'><img src='src/images/Dulces/pie.png'/></button></div><div class='item'><button value='120'><img src='src/images/Dulces/pudding.png'/></button></div><div class='item'><button value='88'><img src='src/images/Dulces/coke.png'/></button></div><div class='item'><button value='193'><img src='src/images/Dulces/azucar.jpg'/></button></div><div class='item'><button value='180'><img src='src/images/Dulces/panela.jpg'/></button></div>"
             );
     
 }
@@ -84,21 +84,20 @@ function loadDulces() {
 /*Función para elegir la comida*/
 function ElegirComida() {
 //Ingresamos un mensaje a mostrar
-    var comida = prompt("Seleccione la comida 0:Desayuno 1:Merienda 2:Almuerzo 3:Algo 4:Cena", );    
+
+$('.endFood').prop('disabled', true);//Desactivar boton de finalziar comida
+    var comida = prompt("Seleccione el NÚMERO de la comida\n\n (1) Desayuno\n (2) Entre Comidas\n (3) Almuerzo\n (4) Cena", );    
 
 //Detectamos si el usuario ingreso un valor
     switch (comida) {
-    case "0":
+    case "1":
         document.querySelector('#etiquetaComida').innerText = 'Desayuno';            
         break;
-    case "1":
-        document.querySelector('#etiquetaComida').innerText = 'Merienda';
-        break;
     case "2":
-        document.querySelector('#etiquetaComida').innerText = 'Almuerzo';
+        document.querySelector('#etiquetaComida').innerText = 'Entre comidas';
         break;
     case "3":
-        document.querySelector('#etiquetaComida').innerText = 'Algo';
+        document.querySelector('#etiquetaComida').innerText = 'Almuerzo';
         break;
     case "4":
         document.querySelector('#etiquetaComida').innerText = 'Cena';
@@ -150,15 +149,56 @@ $(".container").rowGrid("appended");
 });
 
 var sumaCalorias=0;//Aquí se almacenan os valores de las calorías
+var mensajeNutrientes="";
+
+function agregarMensaje(element){
+	console.log(element);
+		switch (element) {
+    case "harinas":
+        mensajeNutrientes="";          
+        break;
+    case "nueces":
+        mensajeNutrientes="";
+        break;
+    case "lacteos":
+        mensajeNutrientes="lacteos";
+        break;
+    case "quesosysust":
+        mensajeNutrientes="";
+        break;
+    case "grasas":
+        mensajeNutrientes="";           
+        break;
+    case "leguminosas":
+        mensajeNutrientes="";
+        break;
+    case "frutas":
+        mensajeNutrientes="";
+        break;
+    case "verduras":
+        mensajeNutrientes="";
+        break;
+    case "carnes":
+        mensajeNutrientes="";
+        break;    
+    case "dulces":
+        mensajeNutrientes="dulces";
+        break;
+        default:
+         mensajeNutrientes="";
+}
+	}
 
 $(function() {//Al presionar uno de los botones
  $(document).on('click', 'button', function(event) {
+ 		
      if(this.id!="gruposComidas"){
          $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
          $(this).addClass('cambioColor');
          $(this).prop('disabled', true);
          //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
-         
+         console.log(this.id);
+         agregarMensaje(this.id);
     sumaCalorias = sumaCalorias + parseInt(this.value);
 	console.log("suma de calorías" + sumaCalorias);
          }
@@ -167,17 +207,18 @@ $(function() {//Al presionar uno de los botones
 
 function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
     
-     
+     		agregarMensaje(this.class);
          $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
          $('#foods button').removeClass('cambioColor');
          $('#foods button').prop('disabled', false);//Habilitar botones de la comida
          //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
+         if(sumaCalorias!=0){$('.endFood').prop('disabled', false);}//Desactivar boton de finalziar comida
          estadoHumor(sumaCalorias);
         
 }
 
 function finSuma(){//Finaliza comida y empieza de nuevo
-    if (confirm("Calorias en total: "+ sumaCalorias+ " Proteinas: 20%"+ " Grasas: 15%"+" Carbohidratos_ 80%") == true) {
+    if (confirm("Calorias aproximadas totales: "+ sumaCalorias+ "\nProteinas: 20%"+ "\nGrasas: 15%"+"\nCarbohidratos: 80%\n\n"+mensajeNutrientes) == true) {
         $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
     $('#foods button').removeClass('cambioColor');
     $('#foods button').prop('disabled', false);//Habilitar botones de la comida
