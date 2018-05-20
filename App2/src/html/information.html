@@ -8,7 +8,7 @@
     <script src="../node_modules/pixi.js/dist/pixi.min.js"></script>
    
     <body>
-        <form class="caracterizacion" action="../../app2.html" method="post" name="caracterizaciones">
+        <form class="caracterizacion" method="post" name="caracterizaciones">
         <ul>
     <center><li>
          <h2>Caracterización</h2>
@@ -17,20 +17,20 @@
     <li>
         <legend for="name">Género:</legend>
          <label>
-            <input type="radio" name="genero" value="hombre" required> Hombre
+            <input type="radio" id="gender" name="genero" value="hombre" required> Hombre
         </label>
         <label>
-            <input type="radio" name="genero" value="mujer"> Mujer
+            <input type="radio" id="gender" name="genero" value="mujer"> Mujer
         </label>
     </li>
     <li>
     <legend for="edad" >Edad:</legend>
-    <label><input type="number" name="edad" placeholder="21" required/> Años</label>
+    <label><input type="number" name="edad" id="age" placeholder="21" required/> Años</label>
     <span class="form_hint">21</span>
 </li>
    <li>
     <legend for="peso">Peso:</legend>
-    <label><input type="number" name="peso" placeholder="65" required/> KG
+    <label><input type="number" id="weight" name="peso" placeholder="65" required/> KG
     </label>
     
     <span class="form_hint">"65"</span>
@@ -38,21 +38,57 @@
 <li>
     <legend for="name">Nivel de actividad física:</legend>
          <label>
-            <input type="radio" name="genero" value="hombre"> Baja(1 o 2 veces/semana)
+            <input type="radio" name="resistenciaFisica" value="baja"> Baja(1 o 2 veces/semana)
         </label>
         <label>
-            <input type="radio" name="genero" value="mujer"> Moderada(3 o 4 veces/semana)
+            <input type="radio" name="resistenciaFisica" value="media"> Moderada(3 o 4 veces/semana)
         </label>
         <label>
-            <input type="radio" name="genero" value="mujer"> Alta(5 o 6 veces/semana)
+            <input type="radio" name="resistenciaFisica" value="alta"> Alta(5 o 6 veces/semana)
         </label>
 </li>
 <center>
 <li>
-    <button class="submit" type="submit" >Completar</button>
+    <button class="submit" type="submit" onClick="enviarCalorias()" >Completar</button>
 </li></center>
     </ul>
        
    </form>
+   
+   <script type="text/javascript"> 
+      function enviarCalorias(){
+          var elem=document.getElementsByName('genero');
+          var elem2=document.getElementsByName('resistenciaFisica');
+          var valor,valor1;    
+        if (elem[0].checked) { 
+            valor = elem[0].value;            
+        }
+        else{
+            valor = elem[1].value; 
+        }
+          if (elem2[0].checked) { 
+            valor1 = elem2[0].value;            
+        }
+          if (elem2[1].checked) { 
+            valor1 = elem2[1].value;            
+        }
+          if (elem2[2].checked) { 
+            valor1 = elem2[2].value;            
+        }
+          
+    
+          console.log(valor);
+          console.log(valor1);
+          console.log(document.getElementById('weight').value);
+          console.log(document.getElementById('age').value);
+          console.log(document.getElementById('resistenciaFisica').value);
+          // window.location="../../app2.html?num=28400";
+      }
+       /*VARIABLE1 = 28400;
+VARIABLE2 = 127;
+window.location="destino.html?num="+VARIABLE1+"&postal="+VARIABLE2;
+http://foros.cristalab.com/como-pasar-una-variable-de-un-html-a-otro-html-t109907/
+*/
+</script> 
     </body>   
 </html>
