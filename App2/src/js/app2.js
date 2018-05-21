@@ -1,3 +1,21 @@
+var paramstr = window.location.search.substr(1);
+var paramarr = paramstr.split ("&");
+var params = {};
+var caloriasCalculoCorrecto;
+
+for ( var i = 0; i < paramarr.length; i++) {
+    var tmparr = paramarr[i].split("=");
+    params[tmparr[0]] = tmparr[1];
+}
+if (params['num']) {
+   caloriasCalculoCorrecto=params['num'];
+    
+   
+    
+} else {
+   console.log('No se envió el parámetro variable');
+}
+
 //Harinas 
 function loadHarinas() {        
     $("#foods").empty();
@@ -125,9 +143,40 @@ var sumaCalorias=0;//Aquí se almacenan os valores de las calorías
 var mensajeNutrientes="";
 var idAlimento;//Almacena el nombre del id del alimento
 var contHarina=0, contLacteos=0, contGrasas=0, contLeguminosas=0, contFrutas=0, contVerduras=0, contCarnes=0, contDulces=0;//Controlar los mensajes que se agregan
+var porcentajeComida=0;
+
+function calculoComidas(caloriasInput){
+    /*Aquí calculamos porcentajes sanos en calorias
+    Desayuno 20%
+    Entre comidas 25%
+    Almuerzo 30%
+    Cena 25%    
+    */
+    switch (document.querySelector('#etiquetaComida').innerText) {
+    case "Desayuno":
+        porcentajeComida=caloriasInput*(20/100);          
+        break;
+    case "Entre comidas":
+        porcentajeComida=caloriasInput*(25/100);
+        break;
+    case "Almuerzo":
+        porcentajeComida=caloriasInput*(30/100);
+        break;
+    case "Cena":
+        porcentajeComida=caloriasInput*(25/100);
+        break;   
+}
+    if(sumaCalorias>porcentajeComida){
+    document.getElementById("imagenEstado").src = "src/images/triste.png";
+        mensajeNutrientes=mensajeNutrientes+"\n¡Cuidado! esta comida excede el número de calorias que debería tener "+porcentajeComida;        
+    }else{
+    document.getElementById("imagenEstado").src = "src/images/feliz.png";
+        
+    }
+}
 
 function agregarMensaje(element){
-	console.log(element);
+	
 		switch (element) {
     case "harinas":
                 contHarina++;
@@ -196,11 +245,12 @@ function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
          $('#foods button').prop('disabled', false);//Habilitar botones de la comida
          //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
          if(sumaCalorias!=0){$('.endFood').prop('disabled', false);}//Desactivar boton de finalziar comida
-         estadoHumor(sumaCalorias);
         
 }
 
 function finSuma(){//Finaliza comida y empieza de nuevo
+    calculoComidas(caloriasCalculoCorrecto);
+    
     if (confirm("Calorias aproximadas totales: "+ sumaCalorias+ "\n\n"+mensajeNutrientes) == true) {
         $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
     $('#foods button').removeClass('cambioColor');
@@ -212,20 +262,11 @@ function finSuma(){//Finaliza comida y empieza de nuevo
         ElegirComida();//Reiniciamos
     } else {
         alert("Nos veremos proximamente!");
-    }
-    
+    }  
     
     
 }
 
-function estadoHumor(calorias){
-    if(calorias>2000){
-    document.getElementById("imagenEstado").src = "src/images/triste.png";
-        
-    }else{
-    document.getElementById("imagenEstado").src = "src/images/feliz.png";
-        
-    }
     
-}
+
 

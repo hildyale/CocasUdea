@@ -37,6 +37,9 @@
 </li>
 <li>
     <legend for="name">Nivel de actividad física:</legend>
+        <label>
+            <input type="radio" name="resistenciaFisica" value="nada"> No realizo actividad física
+        </label>
          <label>
             <input type="radio" name="resistenciaFisica" value="baja"> Baja(1 o 2 veces/semana)
         </label>
@@ -47,43 +50,103 @@
             <input type="radio" name="resistenciaFisica" value="alta"> Alta(5 o 6 veces/semana)
         </label>
 </li>
-<center>
-<li>
-    <button class="submit" type="submit" onClick="enviarCalorias()" >Completar</button>
-</li></center>
-    </ul>
-       
-   </form>
+    </ul>   
+        
+   </form> 
+   <button class="submit" type="submit" onClick="enviarCalorias()">Completar</button>
+   
    
    <script type="text/javascript"> 
+       var sumaCaloriasParcial=0;
+       
+     
       function enviarCalorias(){
           var elem=document.getElementsByName('genero');
           var elem2=document.getElementsByName('resistenciaFisica');
-          var valor,valor1;    
+          var valor,valor1;
+          
+          
         if (elem[0].checked) { 
             valor = elem[0].value;            
         }
         else{
             valor = elem[1].value; 
         }
+          
           if (elem2[0].checked) { 
-            valor1 = elem2[0].value;            
+            valor1 = elem2[0].value;
+              sumaCaloriasParcial= sumaCaloriasParcial+0;
+              
         }
           if (elem2[1].checked) { 
-            valor1 = elem2[1].value;            
+            valor1 = elem2[1].value;
+              sumaCaloriasParcial=sumaCaloriasParcial+850;
+             
         }
           if (elem2[2].checked) { 
-            valor1 = elem2[2].value;            
+            valor1 = elem2[2].value; 
+              sumaCaloriasParcial=sumaCaloriasParcial+1350;              
+        }
+          if (elem2[3].checked) { 
+            valor1 = elem2[3].value; 
+              sumaCaloriasParcial=sumaCaloriasParcial+1800;
+                      }
+                  
+          
+    var variableEdades=document.getElementById('age').value;          
+                    
+          if(variableEdades<25){
+        sumaCaloriasParcial=sumaCaloriasParcial+ 300;           
+          }
+          
+        if(variableEdades>45&&variableEdades<=55){
+        sumaCaloriasParcial=sumaCaloriasParcial- 100;        
         }
           
+        if(variableEdades>55&&variableEdades<=65){
+        sumaCaloriasParcial=sumaCaloriasParcial+ 200;        
+        }
+          
+        if(variableEdades>65){       sumaCaloriasParcial=sumaCaloriasParcial+ 300;}        
+                             
+          
+        if(valor=="mujer"){
+sumaCaloriasParcial=sumaCaloriasParcial+ (23*document.getElementById('weight').value);
+            
+        }
+          else{
+sumaCaloriasParcial=sumaCaloriasParcial+ (25*document.getElementById('weight').value);
+             
+          }       
     
-          console.log(valor);
-          console.log(valor1);
-          console.log(document.getElementById('weight').value);
-          console.log(document.getElementById('age').value);
-          console.log(document.getElementById('resistenciaFisica').value);
-          // window.location="../../app2.html?num=28400";
+          redirigirCalorias();
+          
+          
       }
+       
+       function redirigirCalorias(){
+           
+           window.location="../../app2.html?num="+sumaCaloriasParcial;
+           
+       }
+       /*
+0 Nada
+850 1 o 2 veces
+1350 3 o 4 veces
+1800 5 o 6 veces
+
+Si tienes menos de 25 años súmale 300 calorías.
+
+Si tienes entre 25 y 45 años no realices ninguna operación.
+
+Si tienes entre 45 y 55 años réstale 100 calorías.
+
+Si tienes entre 55 y 65 años réstale  200 calorías.
+
+Y si tienes más de 65 años réstale 300 calorías.
+
+Si eres hombre multiplica tu peso por 25, si eres mujer por 23
+*/
        /*VARIABLE1 = 28400;
 VARIABLE2 = 127;
 window.location="destino.html?num="+VARIABLE1+"&postal="+VARIABLE2;
