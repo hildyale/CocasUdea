@@ -5,15 +5,25 @@ const width = document.documentElement.clientWidth;
 //const height = window.screen.availHeight-95;
 const height = document.documentElement.clientHeight-4;
 const app = new PIXI.Application(width, height, {transparent : true}); //1099bb
+log(width+":"+height);
+const showLogo = (height>580) ? true: false;
+const showLogos = (width>1000) ? true: false;
 PIXI.SCALE_MODES.NEAREST;
 document.body.appendChild(app.view);
-const scale = 0.8;
+let scale = 0.8;
+let spritesScale = 0.2;
+let Puntaje = 0;
+if(!showLogos || !showLogo){
+    scale = 0.5;
+    spritesScale = 0.15;
+}
 let cantidadAlimentos = getParameterByName('cant');
 if(!cantidadAlimentos){
     cantidadAlimentos = 10;
 }
 let iconos = undefined;
 let Activo = undefined;
+let Finish = false;
 let ticker = new PIXI.ticker.Ticker();
 ticker.stop();
 configTicker();
@@ -56,7 +66,8 @@ loader.add('billboard', 'src/images/billboard1.png')
 .add('instruccionesTitulo', 'src/images/instrucciones.png')
 .add('acercaTitulo', 'src/images/acerca.png')
 .add('logosimbolo', 'src/images/logosimbolo-vertical2.png')
-.add('facultad', 'src/images/Facultad-de-Ingeniería.png')
+.add('facultad', 'src/images/Facultad-de-Ingenieria.png')
+.add('escuelaNutricion', 'src/images/Escuela-de-Nutricion-y-Dietetica.png')
 .add('jsonIconos', 'src/utils/iconos.json')
 
 
@@ -67,7 +78,7 @@ loader.load((loader,resources) => {
     //message
     let style = new PIXI.TextStyle({
         fontFamily: "times new roman",
-        fontSize: 30,
+        fontSize: 38*scale,
         fill: "white",
       });
 
@@ -117,18 +128,26 @@ loader.load((loader,resources) => {
     
     gameScene.addChild(sprites.saludable);
 
+    if(showLogo){
+        sprites.logo = new LogoUniversidad(Inicio,resources.logosimbolo.texture);
+        sprites.logoInstrucciones =  new LogoUniversidad(Instrucciones,resources.logosimbolo.texture); 
+        sprites.logoAcerca =  new LogoUniversidad(Acerca,resources.logosimbolo.texture);
+    }
 
-    sprites.logo = new LogoUniversidad(Inicio,resources.logosimbolo.texture);
-    sprites.logoInstrucciones =  new LogoUniversidad(Instrucciones,resources.logosimbolo.texture); 
-    sprites.logoAcerca =  new LogoUniversidad(Acerca,resources.logosimbolo.texture);
+    if(showLogos){
+        sprites.logo2 = new LogoFacultad(Inicio,resources.facultad.texture);
+        sprites.logo2Instrucciones = new LogoFacultad(Instrucciones,resources.facultad.texture);
+        sprites.logo2Acerca = new LogoFacultad(Acerca,resources.facultad.texture);
 
-    sprites.logo2 = new LogoFacultad(Inicio,resources.facultad.texture);
-    sprites.logo2Instrucciones = new LogoFacultad(Instrucciones,resources.facultad.texture);
-    sprites.logo2Acerca = new LogoFacultad(Acerca,resources.facultad.texture);
+        sprites.logo3 = new LogoEscuelaNutricion(Inicio,resources.escuelaNutricion.texture);
+        sprites.logo3Instrucciones = new LogoEscuelaNutricion(Instrucciones,resources.escuelaNutricion.texture);
+        sprites.logo3Acerca = new LogoEscuelaNutricion(Acerca,resources.escuelaNutricion.texture);
+    }
 
+    let logoy =  (sprites.logo) ? sprites.logo.height: 0;
     sprites.titulo = new PIXI.Sprite(resources.titulo.texture);
     sprites.titulo.x = (width-sprites.titulo.width)/2;
-    sprites.titulo.y = sprites.logo.height;
+    sprites.titulo.y = logoy;
     Inicio.addChild(sprites.titulo);
 
     sprites.buttons = [];
@@ -171,12 +190,12 @@ loader.load((loader,resources) => {
 
     sprites.instruccionesTitulo = new PIXI.Sprite(resources.instruccionesTitulo.texture);
     sprites.instruccionesTitulo.x = (width-sprites.instruccionesTitulo.width)/2;
-    sprites.instruccionesTitulo.y = sprites.logo.height;
+    sprites.instruccionesTitulo.y = logoy;
     Instrucciones.addChild(sprites.instruccionesTitulo);
 
     sprites.acercaTitulo = new PIXI.Sprite(resources.acercaTitulo.texture);
     sprites.acercaTitulo.x = (width-sprites.acercaTitulo.width)/2;
-    sprites.acercaTitulo.y = sprites.logo.height;
+    sprites.acercaTitulo.y = logoy;
     Acerca.addChild(sprites.acercaTitulo);
 
     
@@ -216,7 +235,8 @@ function configTicker(){
                 cont = 0
                 velocity = 1;
                 Activo.alpha = 0;
-                if(Activo.type === "bueno"){
+                if(Activo.type === "saludable"){
+                    Puntaje++;
                     sprites.billboard.setTexture(loader.resources.billboardok.texture);
                     changeBillboard();
                 }else{
@@ -231,7 +251,8 @@ function configTicker(){
                 cont = 0
                 velocity = 1;
                 Activo.alpha = 0;
-                if(Activo.type === "malo"){
+                if(Activo.type === "noSaludable"){
+                    Puntaje++;
                     sprites.billboard.setTexture(loader.resources.billboardok.texture);
                     changeBillboard();
                 }else{
@@ -242,7 +263,12 @@ function configTicker(){
             }
             
         }else{
-            changeFinish();
+            if(!Finish) {
+                Puntaje = parseInt((Puntaje/cantidadAlimentos)*100,10);
+                log(Puntaje)
+                changeFinish();
+                Finish = true;
+            }
         }
     });
     
