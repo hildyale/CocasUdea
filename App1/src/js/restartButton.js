@@ -17,8 +17,8 @@ class restartButton extends PIXI.Sprite{
         this.zIndex = -2;
         this.on('pointerdown', event=>{
             location.reload();
-            Inicio.visible = false;
-            gameScene.visible = true;
+            //Inicio.visible = false;
+            //gameScene.visible = true;
         })
     }
 

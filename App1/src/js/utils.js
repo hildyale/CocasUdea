@@ -163,9 +163,33 @@ function sleep(ms) {
   }  
 
   async function changeFinish() {
-    await sleep(1000);
+    await sleep(2000);
     Activo = undefined;
-    sprites.billboard.setTexture(loader.resources.billboardwin.texture);
+    //sprites.billboard.setTexture(loader.resources.billboardwin.texture);
+    if(Puntaje>=50){
+      swal({
+        title: "Buen Trabajo!",
+        text: "Obtuviste un puntaje de: "+Puntaje+"%",
+        icon: "success",
+        button: "Reiniciar",
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+      }).then(() => {
+        location.reload();
+      });
+    }else{
+      swal({
+        title: "Debes Mejorar!",
+        text: "Obtuviste un puntaje de: "+Puntaje+"%",
+        icon: "warning",
+        button: "Reiniciar",
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+      }).then(() => {
+        location.reload();
+      });
+    }
+    //location.reload();
     ticker.stop();
   }  
 

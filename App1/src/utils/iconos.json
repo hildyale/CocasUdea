@@ -1,174 +1,180 @@
 
 {
-"__comentario":"Buenos: 20 , Malos: 8",
+"__comentario":"saludables: 23 , noSaludables: 6",
 "alimentos":[
     {
        "nombre":"banano",
-       "consejo":"controla su consumo si tienes sobrepeso o problemas de azúcar",
-       "src":"src/images/fruits-vegetables/png/028-banana.png",
-       "tipo":"bueno"
+       "consejo":"fuente de potasio, importante para prevenir calambres musculares y mantener una adecuada función nerviosa",
+       "src":"src/images/other/028-banana.png",
+       "tipo":"saludable"
     },
     {
         "nombre":"naranja",
-        "consejo":"controla su consumo por su alto contenido calorico",
-        "src":"src/images/fruits-vegetables/png/039-orange.png",
-        "tipo":"bueno"
+        "consejo":"prefiere consumirla entera, para aprovechar el contenido de fibra",
+        "src":"src/images/other/039-orange.png",
+        "tipo":"saludable"
      },
      {
-        "nombre":"manzana",
-        "consejo":"controla su consumo si tienen problemas de azúcar",
-        "src":"src/images/fruits-vegetables/png/050-apple.png",
-        "tipo":"bueno"
+        "nombre":"manzana roja",
+        "consejo":"buen aporte de fibra para mantener una adecuada función gastrointestinal",
+        "src":"src/images/other/050-apple.png",
+        "tipo":"saludable"
      },    
      {
         "nombre":"tomate de árbol",
-        "consejo":"",
+        "consejo":"fuente de vitamina C, para prevenir enfermedades infecciosas",
         "src":"src/images/other/tomatotreeb.png",
-        "tipo":"bueno"
+        "tipo":"saludable"
      },    
      {
         "nombre":"zanahoria",
-        "consejo":"controla su consumo si tienen problemas de azúcar",
-        "src":"src/images/gastronomy-set/png/carrot.png",
-        "tipo":"bueno"
+        "consejo":"rica en carotenos como la vitamina A, para prevenir problemas de visión",
+        "src":"src/images/other/carrot.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"lechuga",
-        "consejo":"",
-        "src":"src/images/fruits-vegetables/png/029-lettuce.png",
-        "tipo":"bueno"
+        "consejo":"fuente de fibra, vitaminas y minerales",
+        "src":"src/images/other/029-lettuce.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"hamburguesa",
-        "consejo":"controla su consumo y evita adicionar salsas y tocineta",
-        "src":"src/images/food/png/024-burger.png",
-        "tipo":"bueno"
+        "consejo":"controla su consumo y evita adicionar salsas, ripio de papa y tocineta",
+        "src":"src/images/other/burger.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"malteada",
         "consejo":"posee alto contenido de azucares",
-        "src":"src/images/fast-food/png/013-milkshake.png",
-        "tipo":"malo"
+        "src":"src/images/other/013-milkshake.png",
+        "tipo":"noSaludable"
      },
      {
         "nombre":"papitas mecato",
         "consejo":"alto contenido de sodio que afecta tus riñones",
         "src":"src/images/other/chips.png",
-        "tipo":"malo"
+        "tipo":"noSaludable"
      },
      {
         "nombre":"galletas",
-        "consejo":"alto contenido de azucar",
-        "src":"src/images/gastronomy-set/png/cookies.png",
-        "tipo":"malo"
+        "consejo":"modere su consumo y prefiera aquellas que sean integrales",
+        "src":"src/images/other/cookies.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"gaseosa",
-        "consejo":"alto contenido en sodio",
-        "src":"src/images/gastronomy-set/png/can.png",
-        "tipo":"malo"
+        "consejo":"alto contenido de azucares y calorías",
+        "src":"src/images/other/can.png",
+        "tipo":"noSaludable"
      },
      {
         "nombre":"embutidos",
-        "consejo":"alto contenido en sodio",
-        "src":"src/images/gastronomy-set/png/sausage.png",
-        "tipo":"malo"
+        "consejo":"altos contenidos en sodio y grasas saturadas",
+        "src":"src/images/other/sausage.png",
+        "tipo":"noSaludable"
      },
      {
         "nombre":"arroz",
         "consejo":"controla su consumo alto contenido de harina",
-        "src":"src/images/gastronomy-set/png/rice.png",
-        "tipo":"bueno"
+        "src":"src/images/other/rice.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"frijoles",
-        "consejo":"si tienes problemas de riñones, controla su consumo",
-        "src":"src/images/gastronomy-set/png/beans.png",
-        "tipo":"bueno"
+        "consejo":"eliminar el agua en la que se remojan, ya que estas contienen sustancias no nutritivas",
+        "src":"src/images/other/frijoles.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"pan blanco",
-        "consejo":"controla su consumo",
-        "src":"src/images/gastronomy-set/png/bread.png",
-        "tipo":"malo"
+        "consejo":"prefiéralo integral, modera su consumo por su alto contenido calórico",
+        "src":"src/images/other/bread.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"carne roja",
-        "consejo":"controla su consumo",
-        "src":"src/images/food/png/011-steak.png",
-        "tipo":"bueno"
+        "consejo":"prefiera los cortes con menor contenido de grasao",
+        "src":"src/images/other/011-steak.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"huevo",
         "consejo":"controla su consumo si tienes problemas de colesterol",
-        "src":"src/images/gastronomy-set/png/egg.png",
-        "tipo":"bueno"
+        "src":"src/images/other/egg.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"arepa",
-        "consejo":"",
+        "consejo":"evite o modere la cantidad de mantequilla que le va a adicionar",
         "src":"src/images/other/arepa.png",
-        "tipo":"bueno"
+        "tipo":"saludable"
      },
      {
         "nombre":"mantequilla",
-        "consejo":"alto contenido de colesterol",
-        "src":"src/images/food/png/033-butter.png",
-        "tipo":"malo"
+        "consejo":"alto contenido de colesterol y grasas saturadas",
+        "src":"src/images/other/033-butter.png",
+        "tipo":"noSaludable"
      },
      {
-        "nombre":"aceite y grasas",
-        "consejo":"alto contenido de colesterol",
+        "nombre":"aceite",
+        "consejo":"modere su consumo y evite reutilizarlo más de 2 veces",
         "src":"src/images/other/olive-oil.png",
-        "tipo":"malo"
+        "tipo":"saludable"
      },
      {
         "nombre":"papas",
-        "consejo":"controla su consumo alto contenido de harina",
-        "src":"src/images/fruits-vegetables/png/022-potato.png",
-        "tipo":"bueno"
+        "consejo":"opte por preparaciones bajas en grasa; asada, al vapor, al horno, a la parrilla, cocidas, en sopas, guisos, ensaladas, acompañadas de verduras y hasta en puré",
+        "src":"src/images/other/022-potato.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"plátano",
-        "consejo":"controla su consumo alto contenido de harina",
+        "consejo":"modere su consumo, alto contenido de harina",
         "src":"src/images/other/green-banana.png",
-        "tipo":"bueno"
+        "tipo":"saludable"
      },
      {
         "nombre":"tomate",
-        "consejo":"lávalo bien antes de consumir",
+        "consejo":"como todas las frutas y verduras, lavar y desinfectar antes de consumir",
         "src":"src/images/gastronomy-set/png/tomato.png",
-        "tipo":"bueno"
+        "tipo":"saludable"
      },
      {
         "nombre":"pescado",
         "consejo":"preferiblemente fresco",
-        "src":"src/images/gastronomy-set/png/fish.png",
-        "tipo":"bueno"
+        "src":"src/images/other/fish.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"pollo",
         "consejo":"retira la piel antes de consumirlo",
-        "src":"src/images/gastronomy-set/png/meat.png",
-        "tipo":"bueno"
+        "src":"src/images/other/meat.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"chocolate",
-        "consejo":"controla el azúcar o panela",
+        "consejo":"no adiciones azucares, para aprovechar",
         "src":"src/images/other/hot-cup.png",
-        "tipo":"bueno"
+        "tipo":"saludable"
      },
      {
         "nombre":"cafe",
-        "consejo":"controla su consumo",
-        "src":"src/images/gastronomy-set/png/coffee-maker.png",
-        "tipo":"bueno"
+        "consejo":"Un buen café tiene antioxidantes que protegen contra algunos tipos de cáncer",
+        "src":"src/images/other/coffee-maker.png",
+        "tipo":"saludable"
      },
      {
         "nombre":"queso",
-        "consejo":"controla su consumo",
-        "src":"src/images/gastronomy-set/png/cheese-1.png",
-        "tipo":"bueno"
+        "consejo":"prefiere aquellos que sean reducidos en grasa y sodio",
+        "src":"src/images/other/cheese-1.png",
+        "tipo":"saludable"
+     },
+     {
+        "nombre":"Chicharron",
+        "consejo":"alto contenido de grasas saturadas",
+        "src":"src/images/other/chicharron.png",
+        "tipo":"noSaludable"
      }
 
 ]
