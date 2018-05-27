@@ -12,9 +12,17 @@
    
     <body>
       <!--Label de las comidas-->
-       <div id="seleccionComida"><center>
-          <legend><span id="etiquetaComida">SELECCIONE COMIDA</span></legend>
+       <div id="seleccionComida">
+          <div class="btn-group">
+          <div>
+              <img id="logo_udea" style="float:left; margin-left: 15%; height:15vh;" src="src/images/logo-udea.png" >
+          </div>
+         <center>
+          <legend><span style="margin-left: 45%;" id="etiquetaComida">SELECCIONE COMIDA</span></legend>
+          
            </center>
+           
+           </div>
        </div>
           
           
@@ -22,8 +30,8 @@
     <div class="btn-group">   
      
       <button onclick="loadHarinas()" id="gruposComidas" class="selectTipo cl">Harinas</button> 
-      <button onclick="loadNuezSemillas()" id="gruposComidas" class="selectTipo cl">Nueces y semillas</button>    
-      <button onclick="loadLacteos()" id="gruposComidas" class="selectTipo ll">Lácteos</button>
+      <button onclick="loadNuezSemillas()" id="gruposComidas" class="selectTipo ns">Nueces y semillas</button>    
+      <button onclick="loadLacteos()" id="gruposComidas" class="selectTipo lc">Lácteos</button>
       <button onclick="loadQuesoSustitutos()" id="gruposComidas" class="selectTipo ll">Quesos y sistitutos</button>     
         <button onclick="loadGrasas()" id="gruposComidas" class="selectTipo ag">Grasas</button> 
       
@@ -40,7 +48,10 @@
                   
 	
         <div class="container" id="foods"> </div> 
+           <div class="estadoNutricion">
+           <center><img id="imagenEstado" style="float:left; margin-left: 1%;" src="src/images/neutra.png" ></center>
            
+       </div>
                                  <div>
             <center>
             <!--<button class="removeFood" id="gruposComidas">Quitar de la comida</button>-->
@@ -49,10 +60,11 @@
        </center>
        </div>
        
-       <div class="estadoNutricion">
-           <center><img id="imagenEstado" src="src/images/neutra.png" ></center>
-           
-       </div>
+       <center>
+           <div><p style="font-weight:bold; margin-top: 10%; font-size: 10px" >© 2018 Sebastian Giraldo Botero. Todos los derechos reservados.</p></div>
+       </center>
+       
+       
         
             
         <script type="text/javascript" src="src/js/jquery.min.js"></script>

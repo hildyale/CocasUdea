@@ -124,10 +124,10 @@ a{
 
 .selectTipo{
     text-transform: uppercase;
-    height: 11vh;
+    height: 6vh;
     margin-right: 0.15%;
     margin-left: 0.5%;
-    font-size: 70%;
+    font-size: 100%;
     font-weight: bold;
     color: white; 
 }
@@ -135,7 +135,15 @@ a{
 
 
 .ll{
-    width: 16vw;
+    width: 25vw;
+    font-size: 78%!important;
+    -webkit-animation-name: bluePulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.lc{
+    width: 15vw;
     -webkit-animation-name: bluePulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -145,7 +153,15 @@ a{
     -webkit-animation-name: yellowPulse;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    width: 26vw;
+    width: 15vw;
+}
+
+.ns{
+    font-size: 78%!important;
+    -webkit-animation-name: yellowPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    width: 25vw;
 }
 
 .ag{
@@ -408,7 +424,7 @@ margin-bottom: 3.5%;
 #etiquetaComida {    
     color: #fff;
     padding-top: 1%;
-    height: 12vh;
+    height: 6vh!important;
     width: 30vw;
     display: inline-block;
     font-weight: bold;

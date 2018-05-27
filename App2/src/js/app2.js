@@ -20,7 +20,7 @@ if (params['num']) {
 function loadHarinas() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button id='harinas' value='266'><img src='src/images/Harinas/pizza.png'/></button></div><div class='item'><button id='harinas' value='178'><img src='src/images/Harinas/baguette.png'/></button></div> <div class='item'><button id='harinas' value='113'><img src='src/images/Harinas/bread.png'/></button></div><div class='item'><button id='harinas' value='348'><img src='src/images/Harinas/cereals.png'/></button></div><div class='item'><button id='harinas' value='263'><img src='src/images/Harinas/corndog.png'/></button></div><div class='item'><button id='harinas' value='386'><img src='src/images/Harinas/croissant.png'/></button></div><div class='item'><button id='harinas' value='324'><img src='src/images/Harinas/flour.png'/></button></div><div class='item'><button id='harinas' value='329'><img src='src/images/Harinas/grain.png'/></button></div><div class='item'><button id='harinas' value='293'><img src='src/images/Harinas/intbread.png'/></button></div><div class='item'><button id='harinas' value='77'><img src='src/images/Harinas/potato.png'/></button></div><div class='item'><button id='harinas' value='311'><img src='src/images/Harinas/friedpotatoes.png'/></button></div><div class='item'><button id='harinas' value='320'><img src='src/images/Harinas/pretzel.png'/></button></div><div class='item'><button id='harinas' value='226'><img src='src/images/Harinas/taco.png'/></button></div><div class='item'><button id='harinas' value='298'><img src='src/images/Harinas/toast.png'/></button></div><div class='item'><button id='harinas' value='159'><img src='src/images/Harinas/yuca.jpg'/></button></div><div class='item'><button id='harinas' value='109'><img src='src/images/Harinas/arepa.jpg'/></button></div><div class='item'><button id='harinas' value='200'><img src='src/images/Harinas/platano_maduro.jpg'/></button></div><div class='item'><button id='harinas' value='122'><img src='src/images/Harinas/platano_verde.png'/></button></div><div class='item'><button id='harinas' value='130'><img src='src/images/Harinas/rice.png'/></button></div><div class='item'><button id='harinas' value='113'><img src='src/images/Harinas/mazorca.jpg'/></button></div><div class='item'><button id='harinas' value='158'><img src='src/images/Harinas/spaguetti.png'/></button></div>"
+            "<div class='item'><button id='harinas' value='266'><img src='src/images/Harinas/pizza.png'/></button></div> <div class='item'><button id='harinas' value='113'><img src='src/images/Harinas/bread.png'/></button></div><div class='item'><button id='harinas' value='348'><img src='src/images/Harinas/cereals.png'/></button></div><div class='item'><button id='harinas' value='263'><img src='src/images/Harinas/corndog.png'/></button></div><div class='item'><button id='harinas' value='386'><img src='src/images/Harinas/croissant.png'/></button></div><div class='item'><button id='harinas' value='324'><img src='src/images/Harinas/flour.png'/></button></div><div class='item'><button id='harinas' value='293'><img src='src/images/Harinas/intbread.png'/></button></div><div class='item'><button id='harinas' value='77'><img src='src/images/Harinas/potato.png'/></button></div><div class='item'><button id='harinas' value='311'><img src='src/images/Harinas/friedpotatoes.png'/></button></div><div class='item'><button id='harinas' value='320'><img src='src/images/Harinas/pretzel.png'/></button></div><div class='item'><button id='harinas' value='226'><img src='src/images/Harinas/taco.png'/></button></div><div class='item'><button id='harinas' value='159'><img src='src/images/Harinas/yuca.jpg'/></button></div><div class='item'><button id='harinas' value='109'><img src='src/images/Harinas/arepa.jpg'/></button></div><div class='item'><button id='harinas' value='200'><img src='src/images/Harinas/platano_maduro.jpg'/></button></div><div class='item'><button id='harinas' value='122'><img src='src/images/Harinas/platano_verde.png'/></button></div><div class='item'><button id='harinas' value='130'><img src='src/images/Harinas/rice.png'/></button></div><div class='item'><button id='harinas' value='113'><img src='src/images/Harinas/mazorca.jpg'/></button></div><div class='item'><button id='harinas' value='158'><img src='src/images/Harinas/spaguetti.png'/></button></div><div class='item'><button id='harinas' value='52'><img src='src/images/Harinas/galleta_soda.jpg'/></button></div>"
             );
     
 }
@@ -46,7 +46,7 @@ function loadLacteos() {
 function loadQuesoSustitutos() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button value='100'><img src='src/images/Quesos y sustitutos/cheese.png'/></button></div><div class='item'><button value='124'><img src='src/images/Quesos y sustitutos/mozarella.png'/></button></div><div class='item'><button value='380'><img src='src/images/Quesos y sustitutos/embutido.jpg'/></button></div><div class='item'><button value='336'><img src='src/images/Quesos y sustitutos/salami.png'/></button></div><div class='item'><button value='400'><img src='src/images/Quesos y sustitutos/sausage.png'/></button></div>"
+            "<div class='item'><button value='100'><img src='src/images/Quesos y sustitutos/quesito.jpg'/></button></div><div class='item'><button value='124'><img src='src/images/Quesos y sustitutos/mozarella.png'/></button></div><div class='item'><button value='380'><img src='src/images/Quesos y sustitutos/embutido.jpg'/></button></div><div class='item'><button value='336'><img src='src/images/Quesos y sustitutos/salami.png'/></button></div><div class='item'><button value='400'><img src='src/images/Quesos y sustitutos/sausage.png'/></button></div><div class='item'><button id='carnes' value='80'><img src='src/images/Quesos y sustitutos/egg.jpg'/></button></div>"
             );
     
 }
@@ -86,7 +86,7 @@ function loadVerduras() {
 function loadCarnes() {        
     $("#foods").empty();
     $(".container").append(
-            "<div class='item'><button id='carnes' value='48'><img src='src/images/Carnes/camaron.png'/></button></div> <div class='item'><button id='carnes' value='208'><img src='src/images/Carnes/cerdo.png'/></button></div><div class='item'><button id='carnes' value='80'><img src='src/images/Carnes/egg.jpg'/></button></div><div class='item'><button id='carnes' value='260'><img src='src/images/Carnes/atun.png'/></button></div><div class='item'><button id='carnes'value='178'><img src='src/images/Carnes/fried-chicken.png'/></button></div><div class='item'><button id='carnes' value='108'><img src='src/images/Carnes/ham.png'/></button></div><div class='item'><button  id='carnes' value='186'><img src='src/images/Carnes/pollosinpiel.png'/></button></div><div class='item'><button id='carnes' value='285'><img src='src/images/Carnes/pollofrito.png'/></button></div><div class='item'><button id='carnes' value='170'><img src='src/images/Carnes/turkey.png'/></button></div>"
+            "<div class='item'><button id='carnes' value='48'><img src='src/images/Carnes/camaron.png'/></button></div> <div class='item'><button id='carnes' value='208'><img src='src/images/Carnes/cerdo.png'/></button></div><div class='item'><button id='carnes' value='260'><img src='src/images/Carnes/atun.png'/></button></div><div class='item'><button id='carnes'value='178'><img src='src/images/Carnes/fried-chicken.png'/></button></div><div class='item'><button id='carnes' value='108'><img src='src/images/Carnes/ham.png'/></button></div><div class='item'><button  id='carnes' value='186'><img src='src/images/Carnes/pollosinpiel.png'/></button></div><div class='item'><button id='carnes' value='285'><img src='src/images/Carnes/pollofrito.png'/></button></div><div class='item'><button id='carnes' value='170'><img src='src/images/Carnes/turkey.png'/></button></div>"
             );
     
 }
@@ -168,7 +168,7 @@ function calculoComidas(caloriasInput){
 }
     if(sumaCalorias>porcentajeComida){
     document.getElementById("imagenEstado").src = "src/images/triste.png";
-        mensajeNutrientes=mensajeNutrientes+"\n¡Cuidado! esta comida excede el número de calorias que debería tener "+porcentajeComida;        
+        mensajeNutrientes=mensajeNutrientes+"\n¡Cuidado! esta comida excede el número de calorias que debería tener "+porcentajeComida+"%";        
     }else{
     document.getElementById("imagenEstado").src = "src/images/feliz.png";
         
@@ -215,7 +215,7 @@ function agregarMensaje(element){
         break;    
     case "dulces":
                 contDulces++;
-                if(contDulces){
+                if(contDulces==1){
         mensajeNutrientes=mensajeNutrientes+"-Tu comida contiene azucar, no deben superar un rango entre 5 y 10% de la ingesta calórica total, lo que equivaldría aproximadamente a una chocolatina pequeña, 2 cucharadas soperas de azúcar o 5 confites. Prefiere los alimentos naturales y con el sabor original sin adicionar aditivos dulces, recuerda que dentro de este grupo está el azúcar refinado, la panela, la miel, los dulces como galletas, confites, chocolatinas y aquellos productos que en sus ingredientes contengan endulzantes calóricos.\n";}
         break;
         default:
@@ -239,7 +239,7 @@ $(function() {//Al presionar uno de los botones
 
 function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
     
-        agregarMensaje(idAlimento);//Envíamos id para agregar mensaje
+        agregarMensaje(idAlimento);//Envíamos id para agregar mensaje        
          $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
          $('#foods button').removeClass('cambioColor');
          $('#foods button').prop('disabled', false);//Habilitar botones de la comida
@@ -248,8 +248,16 @@ function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
         
 }
 
+function faltaNutriente(){
+    if(contHarina==0){mensajeNutrientes=mensajeNutrientes+"\n\nSe debe consumir una harina por comida"}
+    if(contVerduras==0){mensajeNutrientes=mensajeNutrientes+"\n\nDebe haber dos porciones  de verduras al dia"}
+    if(contCarnes==0){mensajeNutrientes=mensajeNutrientes+"\n\nSe debe consumir carne almenos 1 vez al dia"}
+       
+}
+
 function finSuma(){//Finaliza comida y empieza de nuevo
     calculoComidas(caloriasCalculoCorrecto);
+    faltaNutriente();
     
     if (confirm("Calorias aproximadas totales: "+ sumaCalorias+ "\n\n"+mensajeNutrientes) == true) {
         $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
