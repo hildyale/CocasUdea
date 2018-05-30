@@ -3,17 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title>Información Relevante</title>
-	<link rel="stylesheet" type="text/css" href="../css/information.css" /> 
+	<link rel="stylesheet" type="text/css" href="../css/information.css" />
+
     </head>
     <script src="../node_modules/pixi.js/dist/pixi.min.js"></script>
    
     <body>
         <form class="caracterizacion" method="post" name="caracterizaciones">
         <ul>
-    <center><li>
-         <h2>Caracterización</h2>
+    <li>
+      <div>         
+            <center><h2>Caracterización</h2> </center>    
+      </div>        
          
-    </li></center>
+    </li>
     <li>
         <legend for="name">Género:</legend>
          <label>
@@ -55,7 +58,7 @@
    </form> 
    <button class="submit" type="submit" onClick="enviarCalorias()">Completar</button>
    
-   
+   <footer><img id="logo_udea" style="float:left; margin-left: 2.5%; height:15vh;" src="../images/logo-udea.png" ></footer>
    <script type="text/javascript"> 
        var sumaCaloriasParcial=0;
        
