@@ -141,6 +141,7 @@
 </span>
 
             <a href="App2/src/html/information.html" id="juego2" style="visibility:hidden;"><button>Juego 2</button></a>
+            <button onclick="isCheck()">
 <span class="switch">
     <span class="switch-border1">
         <span class="switch-border2">
@@ -170,7 +171,7 @@
             </span>
         </span>
     </span>
-</span>
+                </span></button>
      </div> 
 
         </div>
@@ -182,12 +183,13 @@
           </center>
             <script type="text/javascript">
                 console.log("prueba");
+                function isCheck(){
             if(document.getElementById("switch1").checked == true){
                 console.log("prueba1");
             document.getElementById('juego1').style.visibility = 'visible';
             }
                 else{document.getElementById('juego1').style.visibility = 'hidden';}
-                
+                }
                  if(document.getElementById("switch2").checked == true){
                      console.log("prueba2");
             document.getElementById('juego2').style.visibility = 'visible';
