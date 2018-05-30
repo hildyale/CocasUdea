@@ -21,6 +21,21 @@
     background-color: aquamarine;
 }
 
+#botonInvisible{
+background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-user-select: none; /* for button */
+   -webkit-appearance: button; /* for input */
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+
 #btnSebas:hover{   
     background-color: greenyellow;
 }
