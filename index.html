@@ -108,7 +108,7 @@
 </svg>
 
 <!-- Botones CSS -->
-<a href="App1/app.html">
+<a href="App1/app.html" id="juego1" style="visibility:hidden">
 <span class="switch">
     <span class="switch-border1">
         <span class="switch-border2">
@@ -140,7 +140,7 @@
     </span>
 </span></a>
 
-<a href="App2/src/html/information.html">
+<a href="App2/src/html/information.html" id="juego2" style="visibility:hidden">
 <span class="switch">
     <span class="switch-border1">
         <span class="switch-border2">
@@ -180,7 +180,17 @@
         <h1>Juegos Web Balance Nutricional</h1>
         <h2>Escuela de Nutrición y Dietética</h2>
           </center>
-
+            <script>
+            if(document.getElementById("switch1").checked == true){
+            document.getElementById('juego1').style.visibility = 'visible';
+            }
+                else{document.getElementById('juego1').style.visibility = 'hidden';}
+                
+                 if(document.getElementById("switch2").checked == true){
+            document.getElementById('juego2').style.visibility = 'visible';
+            }
+                else{document.getElementById('juego2').style.visibility = 'hidden';}
+            </script>
    
     </body>
 </html>
