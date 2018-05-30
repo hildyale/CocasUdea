@@ -131,7 +131,7 @@ $(document).ready(function() {
  var options = {minMargin: 5, maxMargin: 15, itemSelector: ".item", firstItemClass: "first-item"};
  $(".container").rowGrid(options);
     $(".container").append(
-     "<p>IMPORTANTE: Seleccione uno de los botones en la parte superior para empezar a elegir los elementos que armarán su comida, cada imagen de un alimento representa una porción de la misma, puede agregar tantas porciones como desee, cuando sienta que ha finalizado la selección de aimentos de click en finalizar comida y se realizará el cálculo correpondiente</p>"                      
+     "<p>IMPORTANTE: Seleccione uno de los botones en la parte superior para empezar a elegir los elementos que armarán su comida, cada imagen de un alimento representa una porción de la misma, puede agregar tantas porciones como desee, cuando sienta que ha finalizado la selección de alimentos de click en finalizar comida y se realizará el cálculo correpondiente</p>"                      
                        
 );
 
