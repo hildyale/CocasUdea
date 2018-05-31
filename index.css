@@ -1,5 +1,5 @@
 
-#btnAlejo, #btnSebas{
+#btnAlejo, #btnSebas, #faded{
     background-color: #607d8b;
     border-radius: 4px;
     border-style: solid;
@@ -11,14 +11,14 @@
     padding: 1%;
     color: white;
 }
-
+/*
 #faded{
 background-color: green;
    font-weight: bold;
     color: white;
         border: 0;
     line-height: normal;
-}
+}*/
 
 .app{
     color: white;
