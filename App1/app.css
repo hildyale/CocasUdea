@@ -24,7 +24,8 @@ body {
 }
 
 .swal-overlay {
-  background-color: rgba(255, 255, 255, 0.212);
+  /*background-color: rgba(255, 255, 255, 0.212);*/
+  background-color: transparent;
 }
 
 .swal-modal {
@@ -32,14 +33,42 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.swal-title {
+  font-size: 30px;
+}
+
+.swal-text {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
 .swal-button {
   padding: 10px 30px;
   border-radius: 5px;
   background-color: #00cc5f;
-  font-size: 16px;
+  font-size: 18px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }  
 
 .swal-button:active {
   background-color: #009947;
 }  
+
+.tip {
+  width: 600px;
+  padding: 10px;
+}
+.tip .swal-overlay {
+  background-color: transparent;
+}
+
+.tip .swal-title {
+  font-size: 40px;
+}
+
+.tip .swal-text {
+  display: block;
+  text-align: center;
+  font-size: 35px;
+}

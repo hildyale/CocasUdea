@@ -20,7 +20,9 @@ class backButton extends PIXI.Sprite{
             gameScene.visible = false;
             Instrucciones.visible = false;
             Acerca.visible = false;
-            ticker.stop();
+            if(!Pause){
+                ticker.stop();
+            }
             document.body.style.background = " linear-gradient(to right,#009947,#80ffbb)";
         })
     }

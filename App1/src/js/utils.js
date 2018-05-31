@@ -163,7 +163,7 @@ function sleep(ms) {
   }  
 
   async function changeFinish() {
-    await sleep(2000);
+    await sleep(500);
     Activo = undefined;
     //sprites.billboard.setTexture(loader.resources.billboardwin.texture);
     if(Puntaje>=50){
@@ -193,12 +193,42 @@ function sleep(ms) {
     ticker.stop();
   }  
 
-  async function changeTip() {
-    sprites.message.text = Activo.tip; 
+  async function changeTip(success) {
+    ticker.stop(); 
+    await sleep(1000)     
+    if(success){        
+      swal({
+        className: "tip",
+        title: Activo.name,
+        text: Activo.tip,
+        icon: "success",
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+        buttons:false,
+        timer:3000
+      })
+    }else{
+      swal({
+        className: "tip",
+        title: Activo.name,
+        text: Activo.tip,
+        icon: "error",
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+        buttons:false,
+        timer:3000
+      })
+    }
+    await sleep(3000)
+    ticker.start();
+  }
+
+  async function changeName() {
+    await sleep(1000);
+    sprites.message.text = Activo.name; 
     await sleep(2000);
     sprites.message.text = ""; 
   }
-
 /*
   async function changeBillboard() {
     //console.log('Taking a break...');
