@@ -97,10 +97,33 @@ loader.load((loader,resources) => {
     //message
      let style = new PIXI.TextStyle({
         fontFamily: "times new roman",
+        fontSize: 100*scale,
+        fill: "#00cc5f",
+        stroke : '#000000',
+        strokeThickness : 0.5,
+        dropShadow: true,
+        dropShadowAlpha: 0.5,
+        dropShadowDistance: 2,
+        align: "left",
+        leading: 0,
+        wordWrap: true,
+        wordWrapWidth: 600*scale,
+      });
+
+    sprites.message = new PIXI.Text("",style);
+    sprites.message.x = (width/2)-((400*scale)/2);
+    sprites.message.y = height/2;
+    gameScene.addChild(sprites.message);
+/*
+    let style = new PIXI.TextStyle({
+        fontFamily: "times new roman",
         fontSize: 38*scale,
         fill: "white",
         stroke : '#000000',
-        strokeThickness : 4,
+        strokeThickness : 1,
+        dropShadow: true,
+        dropShadowAlpha: 1,
+        dropShadowDistance: 2,
         align: "left",
         leading: 0,
         wordWrap: true,
@@ -110,7 +133,7 @@ loader.load((loader,resources) => {
     sprites.message = new PIXI.Text("",style);
     sprites.message.x = (width/2)-((250*scale)/2);
     sprites.message.y = sprites.billboard.y+20;
-    gameScene.addChild(sprites.message);
+    gameScene.addChild(sprites.message);*/
 
     /************************************************************************************************************************************************************** */
     //Sprites
@@ -488,7 +511,7 @@ function configTicker(){
     const abajo = () =>{
         if(Activo && !Pause){
             if(Activo.y < height-(sprites.saludable.height*scale)){
-                velocity = 10;
+                velocity = 8;
             }
         }
     };
