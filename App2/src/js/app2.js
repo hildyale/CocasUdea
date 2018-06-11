@@ -228,12 +228,11 @@ var controlColor=0;
 $(function() {//Al presionar uno de los botones
  $(document).on('click', 'button', function(event) {
 	 //Deseleccionamos boton clickeado por error
- 		if(this.id!="gruposComidas"&&controlColor==1&&sumaCalorias!=0){
+ 		if(this.id!="gruposComidas"&&controlColor==1){
          $(this).removeClass('cambioColor');
-         sumaCalorias = sumaCalorias - parseInt(this.value);
-	idAlimento='';//Eliminamos id
+			if(sumaCalorias!=0){sumaCalorias = sumaCalorias - parseInt(this.value);}
+	idAlimento='';//Eliminamos id			
 			controlColor=0;
-		 console.log("Prueba");
 			return;
      }
 	 
