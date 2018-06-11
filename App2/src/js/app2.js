@@ -229,7 +229,7 @@ $(function() {//Al presionar uno de los botones
      if(this.id!="gruposComidas"){
          $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
          $(this).addClass('cambioColor');
-         $(this).prop('disabled', true);//Desactivamos para que no lo clickeen 2 veces       
+         //$(this).prop('disabled', true);//Desactivamos para que no lo clickeen 2 veces       
          idAlimento=this.id;//Almacenamos la categoria del alimento seleccionado
          
     sumaCalorias = sumaCalorias + parseInt(this.value);
