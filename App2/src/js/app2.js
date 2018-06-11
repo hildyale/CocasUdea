@@ -223,26 +223,24 @@ function agregarMensaje(element){
 }
 	}
 
-var controlColor=0;
+
 
 $(function() {//Al presionar uno de los botones
  $(document).on('click', 'button', function(event) {
 	 //Deseleccionamos boton clickeado por error
- 		if(controlColor==1){
+ 		if(this.class=="cambioColor"){
          $(this).removeClass('cambioColor');
          sumaCalorias = sumaCalorias - parseInt(this.value);
-	idAlimento='';//Eliminamos id
-		 controlColor=0;
+	idAlimento='';//Eliminamos id		
 		 console.log("Prueba");
 			return;
      }
 	 
-     if(this.id!="gruposComidas"&&controlColor==0){
+     if(this.id!="gruposComidas"&&this.class!="cambioColor"){
          $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
          $(this).addClass('cambioColor');
          //$(this).prop('disabled', true);//Desactivamos para que no lo clickeen 2 veces       
-         idAlimento=this.id;//Almacenamos la categoria del alimento seleccionado
-         controlColor=1;
+         idAlimento=this.id;//Almacenamos la categoria del alimento seleccionado        
     sumaCalorias = sumaCalorias + parseInt(this.value);
          }
 	 
