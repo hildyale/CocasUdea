@@ -234,10 +234,11 @@ $(function() {//Al presionar uno de los botones
          
     sumaCalorias = sumaCalorias + parseInt(this.value);
          }
-	 
+	 //Deseleccionamos boton clickeado por error
 	 if(this.class=="cambioColor"){
          $(this).removeClass('cambioColor');
          sumaCalorias = sumaCalorias - parseInt(this.value);
+	idAlimento='';//Eliminamos id
      }
   });
 });
