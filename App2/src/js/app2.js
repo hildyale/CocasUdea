@@ -234,6 +234,7 @@ $(function() {//Al presionar uno de los botones
 	idAlimento='';//Eliminamos id
 		 controlColor=0;
 		 console.log("Prueba");
+			return;
      }
 	 
      if(this.id!="gruposComidas"&&controlColor==0){
