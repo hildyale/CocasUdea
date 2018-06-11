@@ -254,6 +254,7 @@ function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
         agregarMensaje(idAlimento);//Envíamos id para agregar mensaje        
          $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
          $('#foods button').removeClass('cambioColor');
+	controlColor=0;//Hacemos que pueda cambiarse el color
          $('#foods button').prop('disabled', false);//Habilitar botones de la comida
          //('#foods button').prop('disabled', true);//Desactivar botones de los alimentos
          if(sumaCalorias!=0){$('.endFood').prop('disabled', false);}//Desactivar boton de finalziar comida
