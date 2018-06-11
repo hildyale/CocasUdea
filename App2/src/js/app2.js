@@ -226,7 +226,7 @@ function agregarMensaje(element){
 $(function() {//Al presionar uno de los botones
  $(document).on('click', 'button', function(event) {
  		
-     if(this.id!="gruposComidas"){
+     if(this.id!="gruposComidas"&&this.class!="cambioColor"){
          $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
          $(this).addClass('cambioColor');
          //$(this).prop('disabled', true);//Desactivamos para que no lo clickeen 2 veces       
