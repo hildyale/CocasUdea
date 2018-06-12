@@ -272,7 +272,7 @@ $(function() {//Al presionar uno de los botones
 
 
 function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
-    
+        calculoComidas(caloriasCalculoCorrecto);//Agregar carita
         agregarMensaje(idAlimento);//Envíamos id para agregar mensaje        
          $('#menuComidas button').prop('disabled', false);//Habilitar botones de las categorias
          $('#foods button').removeClass('cambioColor');
@@ -291,7 +291,7 @@ function faltaNutriente(){
 }
 
 function finSuma(){//Finaliza comida y empieza de nuevo
-    calculoComidas(caloriasCalculoCorrecto);
+    
     faltaNutriente();
     
     if (confirm("Calorias aproximadas totales: "+ sumaCalorias+ "\n\n"+mensajeNutrientes) == true) {
