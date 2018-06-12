@@ -451,5 +451,31 @@ margin-bottom: 3.5%;
     margin-bottom: 2.5%;
     
     height: auto;
-    width: 8vw;
+    width: 6vw;
 }
+/*Divisor nombre de la comia*/
+.blur{ 
+   background-color: #ccc; /*shadow color*/ 
+   color: inherit; 
+   margin-left: 4px; 
+   margin-top: 10px; 
+   width: 224px; 
+} 
+.shadow, .content{ 
+   position: relative; 
+   bottom: 2px; 
+   right: 2px; 
+} 
+.shadow{ 
+   background-color: #666; /*shadow color*/ 
+   color: inherit; 
+} 
+.content{ 
+   background-color: #fff; /*background color of content*/ 
+   color: #000; /*text color of content*/ 
+   border: 1px solid #000; /*border color*/ 
+   padding: .5em 2ex; 
+} 
+.content IMG{ 
+   border: 1px solid #000000; 
+} 
