@@ -177,7 +177,7 @@ function calculoComidas(caloriasInput){
 }
     if(sumaCalorias>porcentajeComida){
     document.getElementById("imagenEstado").src = "src/images/triste.png";
-        mensajeNutrientes=mensajeNutrientes+"\n¡Cuidado! esta comida excede el número de calorias que debería tener\n"+porcentajeComida+"%";        
+        mensajeNutrientes=mensajeNutrientes+"\n¡Cuidado! esta comida excede el número de calorias que debería tener "+porcentajeComida+"%\n";        
     }else{
     document.getElementById("imagenEstado").src = "src/images/feliz.png";
         
