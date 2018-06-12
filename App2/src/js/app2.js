@@ -124,10 +124,19 @@ $('.endFood').prop('disabled', true);//Desactivar boton de finalziar comida
             ElegirComida();
 }
 }
-
-
+/*
+$(function() {
+  $('#foods').hover(function() {
+      $(this).find('.item').document.querySelector('#hoverNombres').innerText = this.name;
+    
+  }, function() {
+    document.querySelector('#hoverNombres').innerText = " ";
+  });
+});
+*/
 
 $(document).ready(function() {
+    
  var options = {minMargin: 5, maxMargin: 15, itemSelector: ".item", firstItemClass: "first-item"};
  $(".container").rowGrid(options);
     $(".container").append(
@@ -224,30 +233,43 @@ function agregarMensaje(element){
 	}
 
 
-var controlColor=0;
+//Mostramos el nombre del alimento
 $(function() {//Al presionar uno de los botones
  $(document).on('click', 'button', function(event) {
 	 //Deseleccionamos boton clickeado por error
- 		if(this.id!="gruposComidas"&&controlColor==1){
-         $(this).removeClass('cambioColor');
-			if(sumaCalorias!=0){sumaCalorias = sumaCalorias - parseInt(this.value);}
-	idAlimento='';//Eliminamos id			
-			controlColor=0;
-			return;
-     }
-	 
-     if(this.id!="gruposComidas"&&controlColor==0){
+ 		if(this.id!="gruposComidas"){
+         document.querySelector('#hoverNombres').innerText = this.name;
+     }	
+  });
+});
+
+var controlColor=0;//Control de botones presionados
+$(function() {//Al presionar uno de los botones
+ $(document).on('click', 'button', function(event) {
+       
+	//Controlamos que no este seleccionado 
+     if(this.id!="gruposComidas"&&$(this).hasClass('cambioColor')==false){
          $('#menuComidas button').prop('disabled', true);//Desactivar botones de las categorias
          $(this).addClass('cambioColor');
          //$(this).prop('disabled', true);//Desactivamos para que no lo clickeen 2 veces       
          idAlimento=this.id;//Almacenamos la categoria del alimento seleccionado
-	     controlColor=1;
     sumaCalorias = sumaCalorias + parseInt(this.value);
+         controlColor= controlColor + 1;//Variable de control para saber cuantos hemos clickeado
+         return;
          }
-	 
+     
+     if(controlColor!=0&&$(this).hasClass('cambioColor')){
+         $(this).removeClass('cambioColor');
+			sumaCalorias = sumaCalorias - parseInt(this.value);
+	           idAlimento='';//Eliminamos id
+            document.querySelector('#hoverNombres').innerText = "";
+         controlColor= controlColor - 1;//Restamos elementos clicleasdos
+         return;
+     } 
 	 
   });
 });
+
 
 function sumarComida(){//Realiza el  calculo de las calorias y reactiva botones
     
