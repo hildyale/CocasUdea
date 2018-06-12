@@ -302,6 +302,7 @@ function finSuma(){//Finaliza comida y empieza de nuevo
          sumaCalorias = 0;
         contHarina=0, contLacteos=0, contGrasas=0, contLeguminosas=0, contFrutas=0, contVerduras=0, contCarnes=0, contDulces=0;//Reinicio de variables
         mensajeNutrientes=" ";//Reinicio de mensajes
+        porcentajeComida = 0;
         ElegirComida();//Reiniciamos
     } else {
         alert("Nos veremos proximamente!");
